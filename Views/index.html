@@ -2,12 +2,12 @@
     <head>
         <title>Fine Mate | Login</title>
         <script src="../Resources/AngularJS/angular.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="../Resources/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
         <link href="../Content/Stylesheet/custom.css" rel="stylesheet" />
-        <link href="../Content/Stylesheet/responsive.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link href="../custom/css/custom.css" rel="stylesheet" />
-        <link href="../custom/css/responsive.css" rel="stylesheet" />
+        <link href="../Content/Stylesheet/responsive.css" rel="stylesheet" />
 
         <script src="../ScriptsNG/Module/LoginModule.js"></script>
         <script src="../ScriptsNG/Service/LoginService.js"></script>
@@ -36,7 +36,7 @@
     </head>
     <body id="fm-login">
         
-        <!--<div class="login-bg-image" style="background-image: url(../Content/image/bg.jpg);"></div>-->
+        <div class="login-bg-image" style="background-image: url(../Content/image/bg.jpg);"></div>
 
         <div class="cover-block">
                 <div class="fm-logo-block">
@@ -57,14 +57,14 @@
                         Username
                     </div>
                     <div class="col-md-8 fm-login-field">
-                        <input type="text" ng-model="UserName" />
+                        <input type="text" ng-model="UserName" placeholder="Type you username"/>
                     </div>
                     <!--password-->
                     <div class="col-md-4 fm-login-caption">
                         Password
                     </div>
                     <div class="col-md-8 fm-login-field">
-                        <input type="password" ng-model="Password" />
+                        <input type="password" ng-model="Password"  placeholder="Type you password"/>
                     </div>
                     <p class="col-md-12 fm-login-forgot-pw">
                         <a href="#">

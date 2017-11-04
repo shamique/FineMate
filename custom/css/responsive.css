@@ -83,6 +83,15 @@
     .bottom-clock, .bottom-clock > div {
         padding: 0px;
     }
+    .fm-login-button-frame {
+        display: inline-block;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .fm-login-btn, .fm-signup-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 
     @media only screen and (max-width: 735px) {
         nav.main-nav > ul.main-menu > li > a {
