@@ -3,9 +3,8 @@
         var LoginStat = LoginService.checkLogin($scope.UserName, $scope.Password);
 
         LoginStat.then(function (stat) {
-            if (stat.data != false) {
-                var role = stat.data;
-
+            var role = stat.data[0];
+            if (role != null) {
                 if (role == 1) {
                     $window.location.assign('Driver/MyProfile');
                 }
@@ -20,6 +19,7 @@
                 }
             }
             else {
+                alert("Invalid ");
                 swal("Invalid Login", "", "error");
             }
         }, function () {

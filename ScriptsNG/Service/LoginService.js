@@ -2,8 +2,8 @@
     this.checkLogin = function (Uname, password) {
         var response = $http({
             method: "post",
-            url: "Login/ValidateLogin",
-            params: {
+            url: "../ServerAPI/login.php",
+            data: {
                 userName: Uname,
                 Password: password
             }
