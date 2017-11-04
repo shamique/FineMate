@@ -1,0 +1,54 @@
+<link href="../../Resources/ngDialog/css/ngDialog.css" rel="stylesheet" />
+<link href="../../Resources/ngDialog/css/ngDialog-theme-default.css" rel="stylesheet" />
+<script src="../../Resources/ngDialog/js/ngDialog.js"></script>
+
+<script src="../../ScriptsNG/Module/PenaltyTypeModule.js"></script>
+<script src="../../ScriptsNG/Service/PenaltyTypeService.js"></script>
+<script src="../../ScriptsNG/Controller/PenaltyTypeController.js"></script>
+
+<link href="../../Content/Stylesheet/custom.css" rel="stylesheet" />
+<link href="../../Content/Stylesheet/responsive.css" rel="stylesheet" />
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+<div class="container-fluid mid-section">
+    <div class="page-caption">
+        <h3>Penalty Types</h3>
+        <hr />
+    </div>
+    <div ng-controller="PenaltyTypeController">
+        <form class="form-inline">
+            <div class="form-group">
+                <label>Search</label>
+                <input type="text" ng-model="search" class="form-control" placeholder="Search">
+            </div>
+            <button class="btn-primary" ng-click="ViewPenalty(0)">New</button>
+        </form>
+        <div class="table-responsive table-frame">
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th ng-click="sort('pen.rule_violation_reason')">
+                            Penalty Name
+                            <span class="glyphicon sort-icon" ng-show="sortKey=='id'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+                        </th>
+                        <th>Points</th>
+                        <th>Penalty Charge</th>
+                        <th>Edit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr dir-paginate="pen in penalties|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+                        <td>{{pen.rule_violation_reason}}</td>
+                        <td>{{pen.rule_violation_number_of_points}}</td>
+                        <td>{{pen.rule_violation_fine_charge}}</td>
+                        <td><button class="btn-primary" ng-click="ViewPenalty(pen.rule_violation_id)">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true">
+
+        </dir-pagination-controls>
+    </div>
+</div>
