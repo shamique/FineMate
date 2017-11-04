@@ -144,12 +144,14 @@
 }
 /*Ipad Landscape*/
 @media only screen and (min-width : 993px) and (max-width : 1199px) {
+    .fm-login-form {
+        width: 500px;
+        filter: blur(50px);
+        transition: 1s;
+    }
 }
 /*Ipad Portrait*/
 @media only screen and (min-width : 768px) and (max-width : 992px) {
-    .fm-login-form {
-        width: 500px!important;
-    }
     .fm-login-field > input {
         height: 70px !important;
     }

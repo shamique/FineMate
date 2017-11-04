@@ -1,0 +1,200 @@
+body {
+    background-color: #ECEFF1;
+}
+.fm-login-form-frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+}
+.fm-login-form {
+    width: 350px;
+    filter: blur(50px);
+    transition: 1s;
+}
+.fm-login-form.after {
+    filter: blur(0px);
+    transition: 1s;
+}
+.fm-login-field > input {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: 1px solid #303F9F;
+    outline: none;
+    -webkit-outline: none;
+    -moz-outline: none;
+    -ms-outline: none;
+    background-color: transparent;
+    transition: 0.3s;
+}
+.fm-login-forgot-pw > a {
+    color: #303F9F;
+    text-decoration: none;
+}
+.fm-login-caption {
+    color: #303F9F;
+}
+.fm-remember-me > input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+.fm-remember-me > .rmb-txt {
+    position: relative;
+    top: 4px;
+}
+.fm-login-forgot-pw {
+    margin: 5px 0px 10px 0px;
+}
+.fm-login-field {
+    display: block;
+    margin: 0px 0px 10px 0px;
+}
+.fm-remember-me > input[type="checkbox"], .fm-remember-me > .rmb-txt {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    color: #303F9F;
+}
+.fm-remember-me {
+    margin-bottom: 15px;
+}
+.fm-login-btn, .fm-signup-btn {
+    background-color: transparent;
+    display: inline-block;
+    padding: 10px;
+    width: 48%;
+    float: left;
+    transition: 0.3s;
+}
+.fm-login-btn {
+    border: 1px solid #303F9F;
+    color: #303F9F;
+}
+.fm-signup-btn {
+    border: 1px solid #FF8F00;
+    color: #FF8F00;
+}
+.fm-signup-btn:hover {
+    border: 1px solid #FF8F00;
+    background-color: #FF8F00;
+    color: #fff;
+}
+.fm-login-btn:hover {
+    border: 1px solid #303F9F;
+    background-color: #303F9F;
+    color: #fff;
+    transition: 0.3s;
+}
+.fm-login-btn {
+    margin-right: 4%;
+}
+.fm-logo-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.fm-logo {
+    max-width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.cover-block {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.doors {
+    display: inline-block;
+    float: left;
+}
+.doors.door-one {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #455A64;
+}
+.doors.door-two {
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+    background-color: #78909C;
+}
+body#fm-login {
+    overflow: hidden;
+}
+.cover-block {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    overflow: hidden;
+    transform: rotate(45deg) scale(2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+}
+.cover-block.after {
+    transform: rotate(0deg) scale(1);
+    transition: 0.5s;
+}
+.doors.door-one.after {
+    transition: 0.5s;
+    left: -50vw;
+    transition: 0.5s;
+}
+.doors.door-two.after {
+    transition: 0.5s;
+    right: -50vw;
+    transition: 0.5s;
+}
+.cover-block .fm-logo-block {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-45deg);
+}
+.cover-block .fm-logo-block > img.fm-logo {
+    max-width: 150px;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.cover-block .fm-logo-block > img.fm-logo.after {
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.5s;
+}
+.cover-block .fm-logo-block > img.fm-logo.after.after1 {
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: 0.5s;
+}
+.login-bg-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}

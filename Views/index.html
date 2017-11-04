@@ -3,11 +3,12 @@
         <title>Fine Mate | Login</title>
         <script src="../Resources/AngularJS/angular.js"></script>
         <link href="../Resources/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
-        <!--    <link href="../Content/Stylesheet/custom.css" rel="stylesheet" />
-            <link href="../Content/Stylesheet/responsive.css" rel="stylesheet" />-->
+        <link href="../Content/Stylesheet/custom.css" rel="stylesheet" />
+        <link href="../Content/Stylesheet/responsive.css" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
         <link href="../custom/css/custom.css" rel="stylesheet" />
-        
+        <link href="../custom/css/responsive.css" rel="stylesheet" />
+
         <script src="../ScriptsNG/Module/LoginModule.js"></script>
         <script src="../ScriptsNG/Service/LoginService.js"></script>
         <script src="../ScriptsNG/Controller/LoginController.js"></script>
@@ -18,36 +19,54 @@
         </style>
         <script>
             $(document).ready(function () {
-                $('.fm-logo').delay(3000).addClass('show-logo');
-                $('.fm-login-button-frame').delay(3000).addClass('show-btn-frame');
-                $('.fm-login-caption').delay(3000).addClass('show-fm-login-caption');
-                $('.fm-login-field').delay(3000).addClass('show-fm-login-field');
-                $('.fm-login-forgot-pw').delay(3000).addClass('show-frgt');
-                $('.fm-remember-me').delay(3000).addClass('show-rmb');
-                $('#fm-login').delay(3000).addClass('show-fm-login');
+                $('.cover-block .fm-logo-block > img.fm-logo').addClass('after');
+                setTimeout(function(){
+                $('.cover-block').addClass('after');
+                    setTimeout(function(){
+                        $('.doors').addClass('after');
+                        setTimeout(function(){
+                            $('.cover-block').remove();
+                        }, 500);
+                        $('.fm-login-form').addClass('after');
+                    }, 500);
+                    $('.cover-block .fm-logo-block > img.fm-logo.after').addClass('after1');
+                }, 1000);
             });
         </script>
     </head>
     <body id="fm-login">
+        
+        <!--<div class="login-bg-image" style="background-image: url(../Content/image/bg.jpg);"></div>-->
+
+        <div class="cover-block">
+                <div class="fm-logo-block">
+                    <img src="../Content/image/fm-logo.png" class="img-responsive fm-logo" />
+                </div>
+            <div class="doors door-one"></div>
+            <div class="doors door-two"></div>
+        </div>
+
         <div class="fm-login-form-frame">
             <div class="fm-login-form" ng-controller="loginController">
-                <!--<img src="../Content/image/fm-logo.png" class="fm-logo" />-->
+                <div class="fm-logo-block">
+                    <img src="../Content/image/fm-logo.png" class="img-responsive fm-logo" />
+                </div>
                 <form>
                     <!--username-->
-                    <div class="col-sm-4 fm-login-caption">
+                    <div class="col-md-4 fm-login-caption">
                         Username
                     </div>
-                    <div class="col-sm-8 fm-login-field">
+                    <div class="col-md-8 fm-login-field">
                         <input type="text" ng-model="UserName" />
                     </div>
                     <!--password-->
-                    <div class="col-sm-4 fm-login-caption">
+                    <div class="col-md-4 fm-login-caption">
                         Password
                     </div>
-                    <div class="col-sm-8 fm-login-field">
+                    <div class="col-md-8 fm-login-field">
                         <input type="password" ng-model="Password" />
                     </div>
-                    <p class="col-sm-12 fm-login-forgot-pw">
+                    <p class="col-md-12 fm-login-forgot-pw">
                         <a href="#">
                             Forgot your password?
                         </a>
