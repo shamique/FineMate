@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+	ul#notification > li > ul {
+		max-width: 400px;
+	}
+}
+@media (max-width: 767px) {	
+	.move-3 {
+		top: 0px;
+	}
+	ul#notification > li > ul {
+		max-width: 250px;
+	}
+}
+@media only screen 
+and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+	.move-3 {
+		top: -100px;
+	}
+}
+@media only screen 
+and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	.move-3 {
+		top: -120px;
+	}
+}
