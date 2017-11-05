@@ -12,7 +12,7 @@
 <script src="../../ScriptsNG/Module/DashboardModule.js"></script>
 <script src="../../ScriptsNG/Service/DashboardService.js"></script>
 <script src="../../ScriptsNG/Controller/DashboardController.js"></script>
-<br />
+
 <div class="row" style="margin-top:5%;">
     <div class="container dashboard-block" ng-controller="DashboardController">
         <!--profile section one-->
@@ -114,15 +114,15 @@
                                 <p>Remaining points : {{to.driver_remain_points}} | No of penalty cases : {{to.NoOfVictim}}</p>
                             </li>
                             @*<li>
-                                    <div class="violator-dp"><img src="http://1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" /></div>
-                                    <label><span>Gayan Sandamal</span></label>
-                                    <p>Remaining points : 24 | No of penalty cases : 8</p>
-                                </li>
-                                <li>
-                                    <div class="violator-dp"><img src="http://1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" /></div>
-                                    <label><span>Sumudu Sahan</span></label>
-                                    <p>Remaining points : 24 | No of penalty cases : 8</p>
-                                </li>*@
+                                <div class="violator-dp"><img src="http://1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" /></div>
+                                <label><span>Gayan Sandamal</span></label>
+                                <p>Remaining points : 24 | No of penalty cases : 8</p>
+                            </li>
+                            <li>
+                                <div class="violator-dp"><img src="http://1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" /></div>
+                                <label><span>Sumudu Sahan</span></label>
+                                <p>Remaining points : 24 | No of penalty cases : 8</p>
+                            </li>*@
                         </ul>
                         @*<button class="w3-btn btn fill-button fine-history-all-btn">View All</button>*@
                     </div>
@@ -132,3 +132,22 @@
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $('ul#notification > li > ul').hide('slow');
+        $('.trigger-after').hide();
+
+        $('.trigger-before').on('click', function () {
+            $('ul#notification > li > ul').show('slow');
+            $('.trigger-after').show();
+            $('.trigger-before').hide();
+        });
+        $('.trigger-after').on('click', function () {
+            $('ul#notification > li > ul').hide('slow');
+            $('.trigger-after').hide();
+            $('.trigger-before').show();
+        });
+        $('.dashboard-block').delay(3000).addClass('show-dashboard-block');
+    });
+</script>

@@ -1,47 +1,12 @@
 <html ng-app="app">
-    <head>
-        <title>Fine Mate | Login</title>
-        <script src="../Resources/AngularJS/angular.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="../Resources/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
-        <link href="../Content/Stylesheet/custom.css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-        <link href="../custom/css/custom.css" rel="stylesheet" />
-        <link href="../Content/Stylesheet/responsive.css" rel="stylesheet" />
-
-        <script src="../ScriptsNG/Module/LoginModule.js"></script>
-        <script src="../ScriptsNG/Service/LoginService.js"></script>
-        <script src="../ScriptsNG/Controller/LoginController.js"></script>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-
-        <style>
-
-        </style>
-        <script>
-            $(document).ready(function () {
-                $('.cover-block .fm-logo-block > img.fm-logo').addClass('after');
-                setTimeout(function(){
-                $('.cover-block').addClass('after');
-                    setTimeout(function(){
-                        $('.doors').addClass('after');
-                        setTimeout(function(){
-                            $('.cover-block').remove();
-                        }, 500);
-                        $('.fm-login-form').addClass('after');
-                    }, 500);
-                    $('.cover-block .fm-logo-block > img.fm-logo.after').addClass('after1');
-                }, 1000);
-            });
-        </script>
-    </head>
+    <?php include 'includes/header.php'; ?>
     <body id="fm-login">
-        
         <div class="login-bg-image" style="background-image: url(../Content/image/bg.jpg);"></div>
 
         <div class="cover-block">
-                <div class="fm-logo-block">
-                    <img src="../Content/image/fm-logo.png" class="img-responsive fm-logo" />
-                </div>
+            <div class="fm-logo-block">
+                <img src="../Content/image/fm-logo.png" class="img-responsive fm-logo" />
+            </div>
             <div class="doors door-one"></div>
             <div class="doors door-two"></div>
         </div>
@@ -83,3 +48,21 @@
         </div>
     </body>
 </html>
+
+
+<script>
+    $(document).ready(function () {
+        $('.cover-block .fm-logo-block > img.fm-logo').addClass('after');
+        setTimeout(function () {
+            $('.cover-block').addClass('after');
+            setTimeout(function () {
+                $('.doors').addClass('after');
+                setTimeout(function () {
+                    $('.cover-block').remove();
+                }, 500);
+                $('.fm-login-form').addClass('after');
+            }, 500);
+            $('.cover-block .fm-logo-block > img.fm-logo.after').addClass('after1');
+        }, 1000);
+    });
+</script>
