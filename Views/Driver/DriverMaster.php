@@ -1,21 +1,3 @@
-﻿<style>
-    /*.grid {
-      width: 800px;
-      height: 400px;
-    }*/
-    .myGrid {
-        width: 1000px;
-        height: 400px;
-    }
-</style>
-
-<script src="../../ScriptsNG/Module/DriverViewModule.js"></script>
-<script src="../../ScriptsNG/Service/DriverViewService.js"></script>
-<script src="../../ScriptsNG/Controller/DriverViewController.js"></script>
-
-<link href="../../Content/Stylesheet/custom.css" rel="stylesheet" />
-<link href="../../Content/Stylesheet/responsive.css" rel="stylesheet" />
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.page-caption').delay(3000).addClass('show-page-caption');

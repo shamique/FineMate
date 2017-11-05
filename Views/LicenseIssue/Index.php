@@ -8,23 +8,6 @@
         height: 400px;
     }
 </style>
-
-<link href="~/Resources/ngDialog/css/ngDialog.css" rel="stylesheet" />
-<link href="~/Resources/ngDialog/css/ngDialog-theme-default.css" rel="stylesheet" />
-<script src="~/Resources/ngDialog/js/ngDialog.js"></script>
-
-<script src="~/Resources/GoogleMap/ng-map.min.js.js"></script>
-<script src="http://maps.google.com/maps/api/js"></script>
-
-<script src="~/ScriptsNG/Module/LicenseIssueModule.js"></script>
-<script src="~/ScriptsNG/Service/LicenseIssueService.js"></script>
-<script src="~/ScriptsNG/Controller/LicenseIssueController.js"></script>
-
-<link href="~/Content/Stylesheet/custom.css" rel="stylesheet" />
-<link href="~/Content/Stylesheet/responsive.css" rel="stylesheet" />
-
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
 <div class="container-fluid mid-section">
     <div class="page-caption">
         <h3>License Issue</h3>

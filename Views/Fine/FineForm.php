@@ -1,17 +1,3 @@
-﻿<script src="../../Resources/DateTimePicker/bootstrap-datetimepicker.min.js"></script>
-<link href="../../Resources/ngDialog/css/ngDialog.css" rel="stylesheet" />
-<link href="../../Resources/ngDialog/css/ngDialog-theme-default.css" rel="stylesheet" />
-<script src="../../Resources/ngDialog/js/ngDialog.js"></script>
-
-<script src="../../ScriptsNG/Module/FineModule.js"></script>
-<script src="../../ScriptsNG/Service/FineService.js"></script>
-<script src="../../ScriptsNG/Controller/FineController.js"></script>
-
-<link href="../../Content/Stylesheet/custom.css" rel="stylesheet" />
-<link href="../../Content/Stylesheet/responsive.css" rel="stylesheet" />
-<link href="../../Content/bootstrap/MaterialSwitch.css" rel="stylesheet" />
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.page-caption').delay(3000).addClass('show-page-caption');

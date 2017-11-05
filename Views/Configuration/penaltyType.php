@@ -1,16 +1,3 @@
-<link href="../../Resources/ngDialog/css/ngDialog.css" rel="stylesheet" />
-<link href="../../Resources/ngDialog/css/ngDialog-theme-default.css" rel="stylesheet" />
-<script src="../../Resources/ngDialog/js/ngDialog.js"></script>
-
-<script src="../../ScriptsNG/Module/PenaltyTypeModule.js"></script>
-<script src="../../ScriptsNG/Service/PenaltyTypeService.js"></script>
-<script src="../../ScriptsNG/Controller/PenaltyTypeController.js"></script>
-
-<link href="../../Content/Stylesheet/custom.css" rel="stylesheet" />
-<link href="../../Content/Stylesheet/responsive.css" rel="stylesheet" />
-
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
-
 <div class="container-fluid mid-section">
     <div class="page-caption">
         <h3>Penalty Types</h3>

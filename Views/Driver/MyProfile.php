@@ -1,16 +1,3 @@
-﻿<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="../../Content/Stylesheet/DriverProfile/custom.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<link href="../../Content/Stylesheet/DriverProfile/custom.css" rel="stylesheet" />
-<link href="../../Content/Stylesheet/DriverProfile/responsive-custom.css" rel="stylesheet" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<script src="../../ScriptsNG/Module/DriverProfileModule.js"></script>
-<script src="../../ScriptsNG/Service/DriverProfileService.js"></script>
-<script src="../../ScriptsNG/Controller/DriverProfileController.js"></script>
-<br />
 <div class="row" style="margin-top:5%;">
     <div class="container" ng-controller="DriverProfileController">
         <!--profile section one-->

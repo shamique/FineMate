@@ -1,11 +1,3 @@
-<script src="../../ScriptsNG/Module/PenaltyTypeFormModule.js"></script>
-<script src="../../ScriptsNG/Service/PenaltyTypeFormService.js"></script>
-<script src="../../ScriptsNG/Controller/PenaltyTypeFormController.js"></script>
-
-<link href="../../Content/Stylesheet/custom.css" rel="stylesheet" />
-<link href="../../Content/Stylesheet/responsive.css" rel="stylesheet" />
-<link href="../../Content/bootstrap/MaterialSwitch.css" rel="stylesheet" />
-
 <div ng-controller="PenaltyTypeFormController">
     <div class="container-fluid mid-section">
         <!--page starts-->

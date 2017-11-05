@@ -7,6 +7,12 @@
     <link href="<?php echo $site_url ?>/Resources/UIGrids/CSS/ui-grid.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Resources/Select2/css/select2.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Content/SweetAlert/sweetalert.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
+    ﻿<link href="<?php echo $site_url ?>/Resources/ngDialog/css/ngDialog.css" rel="stylesheet" />
+    <link href="<?php echo $site_url ?>/Resources/ngDialog/css/ngDialog-theme-default.css" rel="stylesheet" />
+
+    <link href="<?php echo $site_url ?>/Content/bootstrap/MaterialSwitch.css" rel="stylesheet" />
 
     <!--custom styles begins-->
     <!--<link href="<?php echo $site_url ?>/Content/Stylesheet/custom.css" rel="stylesheet" />-->
@@ -18,6 +24,11 @@
 
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="<?php echo $site_url ?>/Resources/UIGrids/Scripts/ui-grid.min.js"></script>
+    <script src="<?php echo $site_url ?>/Resources/DateTimePicker/bootstrap.min.js"></script>
+    <script src="<?php echo $site_url ?>/Resources/DateTimePicker/moment.js"></script>
+    <script src="<?php echo $site_url ?>/Resources/DateTimePicker/bootstrap-datetimepicker.min.js"></script>
+
     <script src="<?php echo $site_url ?>/Resources/AngularJS/angular.js"></script>
     <script src="<?php echo $site_url ?>/Resources/AngularJS/angular-route.js"></script>
     <script src="<?php echo $site_url ?>/Resources/AngularJS/angular-touch.js"></script>
@@ -27,15 +38,45 @@
     <script src="<?php echo $site_url ?>/ScriptsNG/Service/LoginService.js"></script>
     <script src="<?php echo $site_url ?>/ScriptsNG/Controller/LoginController.js"></script>
 
-
-    <script src="<?php echo $site_url ?>/Resources/UIGrids/Scripts/ui-grid.min.js"></script>
-    <script src="<?php echo $site_url ?>/Resources/DateTimePicker/bootstrap.min.js"></script>
-    <script src="<?php echo $site_url ?>/Resources/DateTimePicker/moment.js"></script>
-    <script src="<?php echo $site_url ?>/Resources/DateTimePicker/bootstrap-datetimepicker.min.js"></script>
+    <script src="<?php echo $site_url ?>/Content/HighCharts/js/highcharts.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Module/DashboardModule.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Service/DashboardService.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Controller/DashboardController.js"></script>
 
     <script src="<?php echo $site_url ?>/Resources/Select2/js/select2.min.js"></script>
     <script src="<?php echo $site_url ?>/Resources/NG-pagination/pagination.js"></script>
     <script src="<?php echo $site_url ?>/Content/SweetAlert/sweetalert.min.js"></script>
+
+    <script src="<?php echo $site_url ?>/ScriptsNG/Module/DriverViewModule.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Service/DriverViewService.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Controller/DriverViewController.js"></script>
+
+
+    <script src="<?php echo $site_url ?>/Resources/ngDialog/js/ngDialog.js"></script>
+
+    <script src="<?php echo $site_url ?>/ScriptsNG/Module/MyActivityModule.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Service/MyActivityService.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Controller/MyActivityController.js"></script>
+
+    <script src="<?php echo $site_url ?>/ScriptsNG/Module/DriverProfileModule.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Service/DriverProfileService.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Controller/DriverProfileController.js"></script>
+    <script src="<?php echo $site_url ?>/Content/Stylesheet/DriverProfile/custom.js"></script>
+
+    <script src="<?php echo $site_url ?>/ScriptsNG/Module/FineModule.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Service/FineService.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Controller/FineController.js"></script>
+
+    <script src="<?php echo $site_url ?>/Resources/GoogleMap/ng-map.min.js.js"></script>
+    <script src="http://maps.google.com/maps/api/js"></script>
+
+    <script src="<?php echo $site_url ?>/ScriptsNG/Module/FineMasterModule.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Service/FineMasterService.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Controller/FineMasterController.js"></script>
+
+    <script src="~/ScriptsNG/Module/LicenseIssueModule.js"></script>
+    <script src="~/ScriptsNG/Service/LicenseIssueService.js"></script>
+    <script src="~/ScriptsNG/Controller/LicenseIssueController.js"></script>
 
     <script src="<?php echo $site_url ?>/Resources/FineMateResource/custom.min.js"></script>
 </head>
@@ -46,7 +87,7 @@
             <div class="content-wrapper">
                 <div class="container-fluid">
                     <div class="logo">
-                        <a href="#" id="logoURL"><img src="../img/logo.png" /></a>
+                        <a href="Dashboard/index.php" id="logoURL"><img src="../img/logo.png" /></a>
                     </div>
                     <nav class="main-nav">
                         <div class="trigger" id="trigger"><img src="img/menu.png" /></div>
@@ -84,11 +125,16 @@
             </div>
         </div>
     </header>
-    
+
 
     <script>
         $('#page-loader').load('/Dashboard/index.php');
         $('nav.main-nav ul li a').click(function (e) {
+            e.preventDefault();
+            var menuUrl = $(this).attr('href');
+            $('#page-loader').load(menuUrl);
+        });
+        $('.logo a').click(function (e) {
             e.preventDefault();
             var menuUrl = $(this).attr('href');
             $('#page-loader').load(menuUrl);

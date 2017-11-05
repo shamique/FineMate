@@ -1,19 +1,4 @@
-﻿<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="../../Content/Stylesheet/DriverProfile/custom.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-<link href="../../Content/Stylesheet/DriverProfile/custom.css" rel="stylesheet" />
-<link href="../../Content/Stylesheet/Dashboard/responsive-custom.css" rel="stylesheet" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
-<script src="../../Content/HighCharts/js/highcharts.js"></script>
-
-<script src="../../ScriptsNG/Module/DashboardModule.js"></script>
-<script src="../../ScriptsNG/Service/DashboardService.js"></script>
-<script src="../../ScriptsNG/Controller/DashboardController.js"></script>
-
-<div class="row" style="margin-top:5%;">
+<div class="row">
     <div class="container dashboard-block" ng-controller="DashboardController">
         <!--profile section one-->
         <div class="row">

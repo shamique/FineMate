@@ -8,21 +8,6 @@
         height: 400px;
     }
 </style>
-<link href="../../Resources/ngDialog/css/ngDialog.css" rel="stylesheet" />
-<link href="../../Resources/ngDialog/css/ngDialog-theme-default.css" rel="stylesheet" />
-<script src="../../Resources/ngDialog/js/ngDialog.js"></script>
-
-<script src="../../Resources/GoogleMap/ng-map.min.js.js"></script>
-<script src="http://maps.google.com/maps/api/js"></script>
-
-<script src="../../ScriptsNG/Module/FineMasterModule.js"></script>
-<script src="../../ScriptsNG/Service/FineMasterService.js"></script>
-<script src="../../ScriptsNG/Controller/FineMasterController.js"></script>
-
-<link href="../../Content/Stylesheet/custom.css" rel="stylesheet" />
-<link href="../../Content/Stylesheet/responsive.css" rel="stylesheet" />
-
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script>
     $(document).ready(function () {
         $('.page-caption').delay(3000).addClass('show-page-caption');
