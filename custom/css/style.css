@@ -128,7 +128,9 @@ div.trigger {
 }
 
 .page-loader {
-    padding: 30px 0px 50px 0px;
+    padding: 50px 0px 50px 0px;
+    top: 0px;
+    left: 0px;
 }
 
 /*fooer*/
