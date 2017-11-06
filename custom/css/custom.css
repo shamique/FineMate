@@ -283,6 +283,9 @@ body {
     -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 .prof-dp {
     background: var(--prof-url);
@@ -307,7 +310,7 @@ body {
     text-align: center;
     margin:auto;
 }
-.fill-button {
+/*.fill-button {
     background-color: #40c381 !important;
     width: 100%;
     padding: 10px !important;
@@ -317,23 +320,40 @@ body {
     -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25),  Exterior Shadow  inset 0 1px rgba(255,255,255,0.3),  Top light Line  inset 0 10px rgba(255,255,255,0.2),  Top Light Shadow  inset 0 10px 20px rgba(255,255,255,0.25),  Sides Light Shadow  inset 0 -15px 30px rgba(0,0,0,0.3);
+}*/
+.fill-button {
+    border-radius: 0px !important;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px !important;
+    margin-top: 20px;
+    color: #fff !important;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    border: 1px solid #fff;
 }
 .fill-button:hover {
-    background-color: #27d671 !important;
+    background-color: #03A678;
     width: 100%;
     padding: 10px;
     margin-top: 20px;
-    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
-    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid #03A678;
 }
 .w3-progress-container {
     background-color: #ABB7B7 !important;
 }
 div#r-points {
     background-color: #1e8bc3 !important;
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
 }
 .move-2 {
     /*margin-top: -150px;*/
@@ -386,10 +406,16 @@ div#r-points {
 .prof-sec-4 table {
     color: #fff;
     font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 .prof-sec-4 table label {
     color: #fff;
     font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 .prof-sec-4 table tr td p {
     margin-bottom: 5px;
@@ -569,13 +595,198 @@ img.trigger.trigger-before {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    margin-bottom: 30px;
+
 }
 .page-caption h3 {
     margin: 5px 0px 0px 0px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 .page-caption hr {
     background: linear-gradient(to bottom right, #E1BEE7, #AB47BC);
     height: 1px;
     border: none;
     margin: 5px 0px 10px 0px;
+}
+table.table.table-bordered.table-condensed.table-striped {
+    margin-top: 10px;
+}
+table.table.table-bordered.table-condensed.table-striped > thead > tr > th {
+    background-color: #B0BEC5;
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.form-group > label {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.form-group > input.form-control {
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    border-radius: 0px;
+    border: 1px solid #aaa;
+}
+.form-group > input.form-control::placeholder {
+    color: #666;
+}
+.progtd {
+    padding: 0px;
+}
+
+.input-group:nth-child(odd) {
+    margin-right: 5%;
+}
+.input-group {
+    width: 47%;
+    display: inline-block;
+}
+.input-group span.input-group-addon {
+    border: none;
+}
+
+.input-block > span.input-block-addon {
+    width: 25%;
+    display: inline-block;
+    float: left;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+.input-block > .input-inner-block {
+    display: inline-block;
+    width: 75%;
+}
+.input-block:nth-child(odd) {
+    margin-right: 4%;
+}
+.input-block {
+    border: 1px solid #aaa;
+    padding: 20px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    width: 100%;
+    display: inline-block;
+    float: left;
+}
+.fine-sub-btn:nth-child(odd) {
+    margin-right: 4%;
+}
+.fine-sub-btn {
+    display: inline-block;
+    width: 48%;
+    float: left;
+}
+span.input-block-addon {
+    position: relative;
+}
+span.input-block-addon > span.glyphicon.glyphicon-calendar {
+    position: absolute;
+    left: 10px;
+    top: -23px;
+}
+input.date-picker {
+    padding-left: 32px;
+}
+.fine-sub-btn {
+    display: inline-block;
+    width: 48% !important;
+    padding: 10px;
+    margin-top: 20px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid #03A678;
+    border-radius: 0px;
+    transition: 0.3s;
+    text-transform: capitalize;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding-right: 10px;
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+.fine-sub-btn:hover {
+    border: 1px solid #03A678;
+    transition: 0.3s;
+}
+.fine-sub-btn.add {
+    background-color: #3F51B5;
+}
+.fine-sub-btn.add:hover {
+    background-color: #5C6BC0;
+}
+.fine-sub-btn.submit {
+    background-color: #03A678;
+}
+.fine-sub-btn.submit:hover {
+    background-color: #26C281;
+}
+.input-inner-block > input:focus, .input-inner-block > select:focus,
+.input-inner-block > input, .input-inner-block > select {
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    border-radius: 0px;
+    border: 1px solid #aaa;
+}
+.table-bordered>tbody>tr>td > button.btn-primary {
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid #03A678 !important;
+    border-radius: 0px;
+    transition: 0.3s;
+    text-transform: capitalize;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+    padding-right: 10px;
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    background-color: #03A678 !important;
+}
+
+.search-new-button {
+    padding: 5px 20px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    border: 1px solid #03A678 !important;
+    border-radius: 0px;
+    transition: 0.3s;
+    text-transform: capitalize;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+    -o-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.25), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0px 8px rgba(0,0,0,-0.25), /* Exterior Shadow */ inset 0 1px rgba(255,255,255,0.3), /* Top light Line */ inset 0 10px rgba(255,255,255,0.2), /* Top Light Shadow */ inset 0 10px 20px rgba(255,255,255,0.25), /* Sides Light Shadow */ inset 0 -15px 30px rgba(0,0,0,0.3);
+    background-color: #03A678 !important;
+    position: relative;
+    top: 4px;
 }

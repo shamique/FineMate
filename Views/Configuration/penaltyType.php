@@ -1,4 +1,4 @@
-<div class="container-fluid mid-section">
+<div class="container mid-section">
     <div class="page-caption">
         <h3>Penalty Types</h3>
         <hr />
@@ -9,7 +9,7 @@
                 <label>Search</label>
                 <input type="text" ng-model="search" class="form-control" placeholder="Search">
             </div>
-            <button class="btn-primary" ng-click="ViewPenalty(0)">New</button>
+            <button class="btn-primary search-new-button" ng-click="ViewPenalty(0)">New</button>
         </form>
         <div class="table-responsive table-frame">
             <table class="table table-bordered table-condensed table-striped">

@@ -7,7 +7,7 @@ div#header {
     background-color: #333;
     background: linear-gradient(to right, #333, #4a148c);
     padding: 20px 20px;
-    border-bottom: 5px solid #008080;
+    border-bottom: 2px solid #008080;
     z-index: 999;
     position: fixed;
     width: 100%;

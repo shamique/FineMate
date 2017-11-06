@@ -3,7 +3,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap-datetimepicker.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i|Oswald:200,300,400,500,600,700|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link href="<?php echo $site_url ?>/Resources/UIGrids/CSS/ui-grid.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Resources/Select2/css/select2.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Content/SweetAlert/sweetalert.css" rel="stylesheet" />
