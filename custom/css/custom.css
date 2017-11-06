@@ -159,6 +159,7 @@ iframe#frame {
 }
 body#fm-login {
     overflow: hidden;
+    height: 100vh;
 }
 .cover-block {
     position: absolute;
@@ -602,7 +603,7 @@ img.trigger.trigger-before {
     padding: 0px 20px 0px 20px;
     background: linear-gradient(to bottom right, #4A148C, #3949AB);
     color: #fff;
-    margin: 10px 0px;
+    margin: -3px 0px 10px 0px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
