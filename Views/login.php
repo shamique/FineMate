@@ -46,24 +46,29 @@
                 </form>
             </div>
         </div>
-    </body>
-</html>
 
 
-<script>
-    $(document).ready(function () {
-        $('html.login-page header').remove();
-        $('.cover-block .fm-logo-block > img.fm-logo').addClass('after');
-        setTimeout(function () {
-            $('.cover-block').addClass('after');
-            setTimeout(function () {
-                $('.doors').addClass('after');
+        <style>
+            html, body {
+                overflow: hidden;
+            }
+        </style>
+        <script>
+            $('html.login-page header').remove();
+            $('html.login-page footer').remove();
+            $(document).ready(function () {
+                $('.cover-block .fm-logo-block > img.fm-logo').addClass('after');
                 setTimeout(function () {
-                    $('.cover-block').remove();
-                }, 500);
-                $('.fm-login-form').addClass('after');
-            }, 500);
-            $('.cover-block .fm-logo-block > img.fm-logo.after').addClass('after1');
-        }, 1000);
-    });
-</script>
+                    $('.cover-block').addClass('after');
+                    setTimeout(function () {
+                        $('.doors').addClass('after');
+                        setTimeout(function () {
+                            $('.cover-block').remove();
+                        }, 500);
+                        $('.fm-login-form').addClass('after');
+                    }, 500);
+                    $('.cover-block .fm-logo-block > img.fm-logo.after').addClass('after1');
+                }, 1500);
+            });
+        </script>
+        <?php include 'includes/footer.php'; ?>

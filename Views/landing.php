@@ -11,27 +11,6 @@
         </section>
 
 
-        <footer>
-            <div class="footer-frame">
-                <div class="container-fluid">
-                    <p class="text-center">Powered by 3Bit Squad</p>
-                </div>
-            </div>
-        </footer>
-
-        <!--<script src="../Resources/UIBlocking.js"></script>
-            <script>
-                $(document).ajaxStart(function () {
-                    $.blockUI({ message: '<h3><img src="../img/ajax-loader.gif" /><br/> Just a moment...</h3>' });
-                });
-                $(document).ajaxComplete(function () {
-                    $.unblockUI();
-                });
-            </script> -->
-
-    </body>
-
-
     <style>
     </style>
 
@@ -77,3 +56,4 @@
 
     <style>
     </style>
+    <?php include 'includes/footer.php'; ?>
