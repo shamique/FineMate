@@ -1,4 +1,4 @@
-<div class="row" style="margin-top:5%;">
+<div class="row">
     <div class="container" ng-controller="DriverProfileController">
         <!--profile section one-->
         <div class="row">
@@ -34,7 +34,7 @@
                             </ul>
                         </li>
                     </ul>
-                    <div class="col-xs-12"><h3>@ViewBag.userName</h3></div>
+                    <div class="col-xs-12"><h3 class="user-name">@ViewBag.userName</h3></div>
                     <div class="prof-entry-user-data col-xs-12">
                         <div class="col-sm-4">
                             <div class="col-xs-12">
@@ -62,23 +62,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--profile section two-->
-            <div class="col-sm-6">
-                <div class="prof-sec-2 bg-sec">
-                    <h4>Remaining Points</h4>
-                    <div class="w3-progress-container">
-                        <div id="r-points" class="w3-progressbar" style="width:20%; background-color:#2192ef;">
-                            <div id="demo" class="w3-center w3-text-white"><span id="percentage"></span></div>
-                        </div>
-                    </div>
-                    @*<button class="w3-btn btn fill-button" onclick="fillbar()">Fill</button>*@
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!--profile section four-->
-            <div class="col-sm-6">
+                
+                
                 <div class="prof-sec-4 bg-sec">
                     <h4>Driver Bio</h4>
                     <table>
@@ -109,9 +94,20 @@
                         </tr>
                     </table>
                 </div>
+                
             </div>
-            <!--profile section three-->
-            <div class="col-sm-6 move-3">
+            <!--profile section two-->
+            <div class="col-sm-6">
+                <div class="prof-sec-2 bg-sec">
+                    <h4>Remaining Points</h4>
+                    <div class="w3-progress-container">
+                        <div id="r-points" class="w3-progressbar" style="width:20%; background-color:#2192ef;">
+                            <div id="demo" class="w3-center w3-text-white"><span id="percentage"></span></div>
+                        </div>
+                    </div>
+                    @*<button class="w3-btn btn fill-button" onclick="fillbar()">Fill</button>*@
+                </div>
+                
                 <div class="prof-sec-3 bg-sec">
                     <h4>Fine History</h4>
                     <div class="fine-history-block">
@@ -126,6 +122,16 @@
                         <button class="w3-btn btn fill-button fine-history-all-btn" ng-click="viewActivity()">View All</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--profile section four-->
+            <div class="col-sm-6">
+                
+            </div>
+            <!--profile section three-->
+            <div class="col-sm-6 move-3">
+                
             </div>
         </div>
     </div>

@@ -95,31 +95,39 @@
                     <nav class="main-nav">
                         <div class="trigger" id="trigger"><img src="img/menu.png" /></div>
                         <ul class="main-menu" id="main-menu">
-                            <li id="mnu_dashboard"><img class="main-menu-ico" src="../img/dashboard-icon.png" /><a href="Dashboard/index.php">Dashboard</a></li>
-                            <li id="driver-menu-item"><img class="main-menu-ico" src="../img/driver-icon.png" /><a href="Driver/DriverMaster.php">Driver</a></li>
+                            <li id="mnu_dashboard">
+                                <a href="Dashboard/index.php">
+                                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                                    Dashboard</a>
+                            </li>
+                            <li id="driver-menu-item"><a href="Driver/DriverMaster.php">
+                                    <i class="fa fa-car" aria-hidden="true"></i>
+                                    Driver</a></li>
                             <li id="mnu_fine" class="has-sub-menu">
-                                <img class="main-menu-ico" src="../img/fine-icon.png" />
-                                <a>Fine</a>
+                                <a>
+                                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                    Fine</a>
                                 <ul class="sub-menu">
-                                    <li id="sub_mnu_fineform"><a href="Fine/FineForm.php">Fine Form</a></li>
-                                    <li id="sub_mnu_finemaster"><a  href="Fine/FineMaster.php">Fine Master</a></li>
-                                    <li id="sub_mnu_issuelist"><a  href="LicenseIssue/index.php">Fine Issue List</a></li>
+                                    <li id="sub_mnu_fineform"><a href="Fine/FineForm.php"><i class="fa fa-file-text" aria-hidden="true"></i>Fine Form</a></li>
+                                    <li id="sub_mnu_finemaster"><a  href="Fine/FineMaster.php"><i class="fa fa-book" aria-hidden="true"></i>Fine Master</a></li>
+                                    <li id="sub_mnu_issuelist"><a  href="LicenseIssue/index.php"><i class="fa fa-list-ol" aria-hidden="true"></i>Fine Issue List</a></li>
                                 </ul>
                             </li>
                             <li id="mnu_configuration" class="has-sub-menu">
-                                <img class="main-menu-ico" src="../img/config-icon.png" />
-                                <a>Configurations</a>
+                                <a>
+                                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                                    Configurations</a>
                                 <ul class="sub-menu">
                                     <li><a href="Configuration/PenaltyType.php">Penalty Type</a></li>
                                 </ul>
                             </li>
-                            <li class="has-sub-menu">
-                                <img class="main-menu-ico" src="../img/user-icon.png" />
+                            <li class="has-sub-menu user-menu">
+                                <img class="main-menu-ico user-icon" src="../img/user-icon.png" />
                                 <!--<a href="#">@ViewBag.userName</a> -->
                                 <ul class="sub-menu">
-                                    <li id="MnuMyprof"><a href="Driver/MyProfile.php">My Profile</a></li>
-                                    <li id="MnuMyActivity"><a href="Driver/MyActivity.php">My Activity</a> </li>
-                                    <li><a href="index.php">Log Out</a></li>
+                                    <li id="MnuMyprof"><a href="Driver/MyProfile.php"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
+                                    <li id="MnuMyActivity"><a href="Driver/MyActivity.php"><i class="fa fa-hand-o-up" aria-hidden="true"></i>My Activity</a> </li>
+                                    <li><a href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -129,17 +137,58 @@
         </div>
     </header>
 
+    <div class="loading-overlay" id="loading-overlay">
 
+    </div>
+
+
+    <style>
+        .loading-overlay {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,0.75);
+            width: 100%;
+            height: 100%;
+            z-index: 999;
+            display: none;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .loading-overlay.after {
+            opacity: 1;
+            transition: 0.5s;
+            display: block;
+        }
+    </style>
     <script>
-        $('#page-loader').load('/Dashboard/index.php');
-        $('nav.main-nav ul li a').click(function (e) {
-            e.preventDefault();
-            var menuUrl = $(this).attr('href');
-            $('#page-loader').load(menuUrl);
-        });
-        $('.logo a').click(function (e) {
-            e.preventDefault();
-            var menuUrl = $(this).attr('href');
-            $('#page-loader').load(menuUrl);
+        $(document).ready(function () {
+            $('#page-loader').load('/Dashboard/index.php');
+            $('nav.main-nav ul li a').click(function (e) {
+                e.preventDefault();
+                var menuUrl = $(this).attr('href');
+
+//                $('#loading-overlay').addClass('after');
+                $('.page-loader').addClass('after');
+
+                setTimeout(function () {
+//                    $('#loading-overlay').removeClass('after');
+                    $('.page-loader').removeClass('after');
+                    $('#page-loader').load(menuUrl);
+                }, 1000);
+            });
+            $('.logo a').click(function (e) {
+                e.preventDefault();
+                var menuUrl = $(this).attr('href');
+                $('#page-loader').load(menuUrl);
+            });
+
+            $('li.has-sub-menu.user-menu').click(function () {
+                $('li.has-sub-menu.user-menu > ul.sub-menu').toggleClass('after');
+            });
+
+            $('nav.main-nav > ul.main-menu > li.has-sub-menu:not(.user-menu)').click(function () {
+                $('li.has-sub-menu.user-menu > ul.sub-menu').removeClass('after');
+            });
         });
     </script>

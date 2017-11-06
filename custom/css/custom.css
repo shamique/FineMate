@@ -4,6 +4,13 @@ body {
 
 .logo > a > img {
     width: 120px;
+    transition: 0.5s;
+}
+#header.stickytop .logo > a > img {
+    width: 90px;
+    position: relative;
+    top: -3px;
+    transition: 0.5s;
 }
 iframe#frame {
     position: relative;
@@ -295,7 +302,7 @@ body {
     background-position: center;
     background-size: 100%;
     margin: auto;
-    border-radius: 40px;
+    border-radius: 50%;
     -webkit-box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.75);
 }
 .prof-sec-1 > div > h3 {
@@ -304,6 +311,7 @@ body {
 
 /*prof section two*/
 .prof-sec-2,
+.prof-sec-3,
 .prof-sec-4 {
     padding: 0px 15px 10px 15px;
     color: #fff;
@@ -359,12 +367,7 @@ div#r-points {
     /*margin-top: -150px;*/
 }
 /*prof section two*/
-.prof-sec-3 {
-    padding: 20px;
-    color: #fff;
-    text-align: center;
-    margin:auto;
-}
+
 .fine-history-block > ul {
     margin: 0px;
     padding: 0px;
@@ -378,7 +381,14 @@ div#r-points {
 }
 .fine-history-block > ul > li:hover {
     transition: 0.3s;
-    background-color: #4f7ed1;
+    background-color: #607D8B;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.fine-history-block .fill-button.fine-history-btn {
+    width: 100%;
+    background-color: #03A678;
 }
 .fine-history-block > ul > li > i {
     font-size: 20px;
@@ -400,7 +410,7 @@ div#r-points {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .move-3 {
-    top: -100px;
+    /*top: -100px;*/
 }
 /*section 4*/
 .prof-sec-4 table {
@@ -438,6 +448,7 @@ ul#notification > li > ul {
     background-color: #663399;
     padding: 10px 30px;
     margin-top: 60px;
+    display: none;
 }
 ul#notification > li > ul > li {
     text-align: left;	
@@ -789,4 +800,35 @@ input.date-picker {
     background-color: #03A678 !important;
     position: relative;
     top: 4px;
+}
+.prof-entry-user-data h5 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.prof-entry-user-data p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #aaa;
+}
+h3.user-name {
+    font-size: 16px;
+    text-transform: capitalize;
+    font-family: 'Oswald';
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+#header.stickytop nav.main-nav > ul.main-menu > li.has-sub-menu > ul.sub-menu {
+    padding-top: 7px !important;
+    transition: 0.5s;
+}
+#header.stickytop img.main-menu-ico.user-icon.navbar-list-img {
+    position: relative;
+    transition: 0.5s;
+    top: 0px;
+}
+img.main-menu-ico.user-icon.navbar-list-img {
+    transition: 0.5s;
+    top: -3px;
 }

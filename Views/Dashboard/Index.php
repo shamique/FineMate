@@ -44,6 +44,16 @@
                         </tr>
                     </table>
                 </div>
+                <div class="prof-sec-4 bg-sec">
+                    <h4>Penalty Wise Victim </h4>
+                    <div class="">
+                        <div class="card">
+                            <div class="card-block">
+                                <div id="penaltyWiseGraph"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-6">
                 <div class="prof-sec-4 bg-sec">
@@ -95,27 +105,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="row">
-
-            <div class="col-sm-6 move-2">
-                <div class="prof-sec-4 bg-sec">
-                    <h4>Penalty Wise Victim </h4>
-                    <div class="">
-                        <div class="card">
-                            <div class="card-block">
-                                <div id="penaltyWiseGraph"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 move-top-dash">
-            </div>
-
         </div>
     </div>
 </div>
