@@ -1,4 +1,4 @@
-<html ng-app="app">
+<html ng-app="app" class="login-page">
     <?php include 'includes/header.php'; ?>
     <body id="fm-login">
         <div class="login-bg-image" style="background-image: url(../Content/image/bg.jpg);"></div>
@@ -52,6 +52,7 @@
 
 <script>
     $(document).ready(function () {
+        $('html.login-page header').remove();
         $('.cover-block .fm-logo-block > img.fm-logo').addClass('after');
         setTimeout(function () {
             $('.cover-block').addClass('after');
