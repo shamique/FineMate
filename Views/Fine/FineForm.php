@@ -26,7 +26,7 @@
 
 
 <div ng-controller="FineController">
-    <div class="container-fluid mid-section">
+    <div class="container mid-section">
         <!--page starts-->
         <div class="page-caption">
             <h3>Fine Submission</h3>

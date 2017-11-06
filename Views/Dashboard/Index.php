@@ -17,6 +17,8 @@
                             <td><p>{{expiredLicense}}</p></td>
                         </tr>
                     </table>
+                </div>
+                <div class="prof-sec-4 bg-sec">
                     <h4>Monthly Figures</h4>
                     <table>
                         <tr>
@@ -69,26 +71,6 @@
                     <!--			</div> -->
                     <!-- row -->
                 </div>
-            </div>
-        </div>
-
-
-        <div class="row">
-
-            <div class="col-sm-6 move-2">
-                <div class="prof-sec-4 bg-sec">
-                    <h4>Penalty Wise Victim </h4>
-                    <div class="">
-                        <div class="card">
-                            <div class="card-block">
-                                <div id="penaltyWiseGraph"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 move-top-dash">
                 <div class="prof-sec-4 bg-sec move-top-dash">
                     <h4>Top 5 Violators</h4>
                     <div class="fine-history-block dash">
@@ -112,6 +94,26 @@
                         @*<button class="w3-btn btn fill-button fine-history-all-btn">View All</button>*@
                     </div>
                 </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+
+            <div class="col-sm-6 move-2">
+                <div class="prof-sec-4 bg-sec">
+                    <h4>Penalty Wise Victim </h4>
+                    <div class="">
+                        <div class="card">
+                            <div class="card-block">
+                                <div id="penaltyWiseGraph"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 move-top-dash">
             </div>
 
         </div>

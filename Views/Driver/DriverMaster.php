@@ -19,7 +19,7 @@
     }
 </style>
 
-<div class="container-fluid mid-section">
+<div class="container mid-section">
     <div class="page-caption">
         <h3>Driver</h3>
         <hr />
