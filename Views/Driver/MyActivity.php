@@ -1,3 +1,7 @@
+<script src="<?php echo $site_url ?>/ScriptsNG/Module/MyActivityModule.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Service/MyActivityService.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Controller/MyActivityController.js"></script>
+
 <div class="container mid-section">
     <div class="page-caption">
         <h3>My Activity</h3>

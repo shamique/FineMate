@@ -14,6 +14,10 @@
     });
 </script>
 
+<script src="<?php echo $site_url ?>/ScriptsNG/Module/FineMasterModule.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Service/FineMasterService.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Controller/FineMasterController.js"></script>
+
 <style>
     .page-caption {
         position: relative;

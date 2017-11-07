@@ -8,6 +8,9 @@
         height: 400px;
     }
 </style>
+<script src="~/ScriptsNG/Module/LicenseIssueModule.js"></script>
+<script src="~/ScriptsNG/Service/LicenseIssueService.js"></script>
+<script src="~/ScriptsNG/Controller/LicenseIssueController.js"></script>
 <div class="container mid-section">
     <div class="page-caption">
         <h3>License Issue</h3>

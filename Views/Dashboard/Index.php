@@ -1,3 +1,6 @@
+<script src="<?php echo $site_url ?>/ScriptsNG/Module/DashboardModule.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Service/DashboardService.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Controller/DashboardController.js"></script>
 <div class="row">
     <div class="container dashboard-block" ng-controller="DashboardController">
         <!--profile section one-->

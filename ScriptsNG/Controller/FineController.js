@@ -12,7 +12,7 @@
         var fineRes = FineService.getFineRefNumber();
 
         fineRes.then(function (res) {
-            $scope.FineNumber = res.data;
+            $scope.FineNumber = res.data[0].FineNumber;
         }, function () {
             swal("Something went wrong", "", "error");
         });
@@ -95,22 +95,26 @@
         var getDriver = FineService.loadDrvrName($scope.LicenseNumber);
 
         getDriver.then(function (res) {
-            if (res.data.length == 0) {
+            if(res.data[0] != null){
+                if (res.data.length == 0) {
+                    $scope.DriverName = "";
+                    swal("Invalid license number", "", "error");
+                }
+                else {
+                    openDriverPopUP();
+                    $scope.DriverName = res.data[0].FullName;
+                    $scope.firstName = res.data[0].FirstName;
+                    $scope.surname = res.data[0].Surname;
+                    $scope.fullName = res.data[0].FullName;
+                    $scope.nicNumber = res.data[0].NIC;
+                    $scope.DOB = parseDate(res.data[0].DOB);
+                    $scope.address = res.data[0].Address;
+                }   
+            }
+            else{
                 $scope.DriverName = "";
                 swal("Invalid license number", "", "error");
             }
-            else {
-                openDriverPopUP();
-                $scope.DriverName = res.data[0].FullName;
-                $scope.firstName = res.data[0].FirstName;
-                $scope.surname = res.data[0].Surname;
-                $scope.fullName = res.data[0].FullName;
-                $scope.nicNumber = res.data[0].NIC;
-                $scope.DOB = parseDate(res.data[0].DOB);
-                //$scope.LicenseIssueDate = parseDate(res.data[0].LicenseIssueDate);
-                $scope.address = res.data[0].Address;
-            }
-
         }, function () { swal("Something went wrong", "", "error"); })
     }
 
@@ -120,7 +124,7 @@
         var getPayment = FineService.getFinePayment($("#PenaltyTypeId").val());
         getPayment.then(function (res) {
             if (res != null) {
-                $scope.isCourtCase = res.data.rule_violation_court_penalty_or_both;
+                $scope.isCourtCase = res.data[0].rule_violation_court_penalty_or_both;
             }
         }, function () { swal("Something went wrong", "", "error"); });
     }
@@ -196,8 +200,8 @@
         getPayment.then(function (res) {
             if (res != null) {
                 $scope.fineList.push({
-                    'FineAmount': res.data.rule_violation_fine_charge, 'Points': res.data.rule_violation_number_of_points,
-                    'FineType': res.data.rule_violation_reason, 'FineTypId': res.data.rule_violation_id, 'courtDate': $("#CourtDate").val()
+                    'FineAmount': res.data[0].rule_violation_fine_charge, 'Points': res.data[0].rule_violation_number_of_points,
+                    'FineType': res.data[0].rule_violation_reason, 'FineTypId': res.data[0].rule_violation_id, 'courtDate': $("#CourtDate").val()
                 });
 
                 $("#CourtDate").val("");

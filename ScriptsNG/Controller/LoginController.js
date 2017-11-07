@@ -19,7 +19,6 @@
                 }
             }
             else {
-                alert("Invalid ");
                 swal("Invalid Login", "", "error");
             }
         }, function () {

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html ng-app="app">
     <?php include 'includes/header.php'; ?>
 
@@ -47,11 +46,10 @@
         });
 
         function loadPages(pageName) {
-            alert(pageName);
             $("#frame").attr('src', pageName);
         }
 
-        $('#page-loader').load('Dashboard/index.php');
+        $('#page-loader').load('Fine/FineForm.php');
     </script>
 
     <style>

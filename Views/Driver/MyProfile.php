@@ -1,3 +1,7 @@
+<script src="<?php echo $site_url ?>/ScriptsNG/Module/DriverProfileModule.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Service/DriverProfileService.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Controller/DriverProfileController.js"></script>
+
 <div class="row">
     <div class="container" ng-controller="DriverProfileController">
         <!--profile section one-->

@@ -1,30 +1,30 @@
 ﻿app.service("FineService", function ($http) {
     this.getPenaltyTypes = function () {
-        return $http.get("Fine/getPenaltyTypes");
+        return getDataFromService(1);
     }
 
     this.getDrivers = function () {
-        return $http.get("Fine/getDrivers");
+        return getDataFromService(2);
     }
 
     this.getCheckPoints = function () {
-        return $http.get("Fine/getCheckpoints");
+        return getDataFromService(6);
     }
 
     this.getPostalDepartments = function () {
-        return $http.get("Fine/getPostalDepartments");
+        return getDataFromService(7);
     }
 
     this.getOfficers = function () {
-        return $http.get("Fine/getPoliceOfficers");
+        return getDataFromService(3);
     }
 
     this.getFineRefNumber = function () {
-        return $http.get("Fine/loadFineReferenceNumber");
+        return getDataFromService(5);
     }
 
     this.loadDrvrName = function (drvId) {
-        var response = $http({ method: "get", url: "Fine/loadDriver", params: { licenseNumber: drvId } });
+        var response = $http({ method: "post", url: "../ServerAPI/fineFormGet.php", data: { typeId: 8, OptionalParam: drvId } });
         return response;
     }
 
@@ -33,7 +33,7 @@
     }
 
     this.getVehicles = function () {
-        return $http.get("Fine/loadVehicles");
+        return getDataFromService(4);
     }
 
     this.saveFine = function (licenseNumber, vehicleId, officerId, deadline, fineRefNum, checkpointId, postDeptId, fineDtlObj) {
@@ -59,11 +59,24 @@
     this.getFinePayment = function (fineTypId) {
         var response = $http({
             method: "post",
-            url: "Fine/getFineAmount",
-            params: {
-                penaltyTypeId: fineTypId
+            url: "../ServerAPI/fineFormGet.php",
+            data: {
+                typeId: 9,
+                OptionalParam: fineTypId
             }
         });
+        return response;
+    }
+
+    function getDataFromService(typeId){
+        var response = $http({
+            method: "post",
+            url: "../ServerAPI/fineFormGet.php",
+            data: {
+                typeId: typeId
+            }
+        });
+        
         return response;
     }
 });

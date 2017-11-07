@@ -1,3 +1,7 @@
+<script src="../ScriptsNG/Module/FineModule.js"></script>
+<script src="../ScriptsNG/Service/FineService.js"></script>
+<script src="../ScriptsNG/Controller/FineController.js"></script>
+
 <script>
     $(document).ready(function () {
         $('.page-caption').delay(3000).addClass('show-page-caption');
@@ -77,8 +81,8 @@
                     <div class="input-block">
                         <span class="input-block-addon">License Number</span>
                         <div class="input-inner-block">
-                            @*<select id="DriverId" class="form-control" ng-model="DriverId"
-                                      ng-options="driv.LicenseNumber for driv in drivers track by driv.DriverID" ng-change="loadDriverName()"></select>*@
+                            <!--<select id="DriverId" class="form-control" ng-model="DriverId"
+                                      ng-options="driv.LicenseNumber for driv in drivers track by driv.DriverID" ng-change="loadDriverName()"></select>-->
                             <input type="text" class="form-control" ng-model="LicenseNumber" id="LicenseNumber" ng-blur="loadDriver()" />
                             <span class="input-block-addon" id="validate_LicenseNumber"></span>
                         </div>
@@ -161,77 +165,77 @@
     </script>
 
     <script type="text/ng-template" id="fineDetails">
-        <di            v class="ngdialog-message">
-        <div class                    ="panel panel-primary">
-        <                div class="panel-heading">
-        <h3 class="panel                            -title">Add Fine Details</h3>
-        </div>
-        <div class="panel-body">
-        <div class="col-md-12">
+        <div class="ngdialog-message">
+            <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Add Fine Details</h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="input-block">
+                                <span class="input-block-addon">Penalty Type</span>
+                                <select id="PenaltyTypeId" class="form-control" ng-model="PenaltyTypeId" ng-options="penType.PenaltyName for penType in PenaltyTypes track by penType.PenaltyTypeId"
+                                        ng-change="loadCourtType()"></select>
+                                <span class="input-block-addon" id="validate_PenaltyTypeId"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4" ng-show="isCourtCase==3">Penalty only<span>
+                            <input ng-model="isCourt" type="checkbox" />
+                        </span>
+                    </div>
+            </div>
+        <br />
+            <div class="row" ng-show="isCourtCase!=2">
+                <div class="col-md-8">
+                    <div class="input-block">
+                        <span class="input-block-addon">Court Date</span>
+                        <input type='text' class="form-control" ng-disabled="isCourt" placeholder="YYYY/MM/DD" id="CourtDate" ng-model="CourtDate" />
+                        <span class="input-block-addon" id="validate_CourtDate"></span>
+                    </div>
+                </div>
+            </div>
+        <br />
+
         <div class="row">
-        <div class="col-md-8">
-        <div class="input-block">
-        <span class="input-block-addon">Penalty Type</span>
-        <select id="PenaltyTypeId" class="form-control" ng-model="PenaltyTypeId"
-        ng-options="penType.PenaltyName for penType in PenaltyTypes track by penType.Penal                                                                tyTypeId"
-        ng-change="loadCourtType()"></select>
-        <span class="input-block-addon" id="validate_PenaltyTypeId"></span>
-        </div>
-        </div>
-        <div class="col-md-4" ng-show="isCourtCase==3">
-        Penalty only<span>
-        <input ng-mod                                                el="isCourt" ty                                            pe="checkbox" /                                            >
-        </span>
-        </div>
+            <button type="button" ng-click="AddToGrid()" class="ngdialog-button ngdialog-button-primary">Add Item</button>
         </div>
         <br />
-        <div class="row" ng-show="isCourtCase!=2">
-        <div class="col-md-8">
-        <div class="input-block">
-        <span class="input-block-addon">Court Date</span>
-        <input type='text' class="form-control" ng-disabled="isCourt" placeholder=                                                            "YYYY/MM/DD" id="CourtDate" ng-model="CourtDate" />
-        <span class="input-block-addon" id="validate_CourtDate"></span>
-        </div>
-        </div>
-        </div>
-        <br />
+
         <div class="row">
-        <button type="button" ng-click="AddToGrid()" class="ngdialog-button ngdialog-button-primary">Add Item</button>
+            <div class="table-responsive table-frame">
+            <table class="table table-bordered table-condensed table-striped">
+                <thead>
+                    <tr>
+                    <th>Fine Type</th>
+                    <th>Points</th>
+                    <th>Amount</th>
+                    <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="fine in fineList">
+                    <td>
+                    {{fine.FineType}}
+                    </td>
+                    <td>
+                    {{fine.Points}}
+                    </td>
+                    <td>
+                    {{fine.FineAmount}}
+                    </td>
+                    <td>
+                    <a href="#" ng-click="removeRow(fine.FineTypId)"><img src="img/remove.png" /></a>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <br />
-        <div class="row">
-        <div class="table-responsive table-frame">
-        <table class="table tab                                                    le-bordered table-condensed table-striped">
-        <thead>
-        <tr>
-        <th>Fine Type</th>
-        <th>Points</th>
-        <th>Amount</th>
-        <th>Remove</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="fine in fineList">
-        <td>
-        {{fine.FineType}}
-        </td>
-        <td>
-        {{fine.Points}}
-        </td>
-        <td>
-        {{fine.FineAmount}}
-        </td>
-        <td>
-        <a href="#" ng-click="removeRow(fine.FineTypId)"><img src="img/remove.png" /></a>
-        </td>
-        </tr>
-        </tbody>
-        </table>
+    </div>
         </div>
         </div>
         </div>
-        </div>
-        </div>
-        </div>
+    </div>
     </script>
 </div>

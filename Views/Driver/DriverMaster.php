@@ -4,6 +4,10 @@
     });
 </script>
 
+<script src="<?php echo $site_url ?>/ScriptsNG/Module/DriverViewModule.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Service/DriverViewService.js"></script>
+<script src="<?php echo $site_url ?>/ScriptsNG/Controller/DriverViewController.js"></script>
+
 <style>
     .page-caption {
         position: relative;

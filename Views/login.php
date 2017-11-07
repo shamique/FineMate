@@ -1,5 +1,8 @@
 <html ng-app="app" class="login-page">
     <?php include 'includes/header.php'; ?>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Module/LoginModule.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Service/LoginService.js"></script>
+    <script src="<?php echo $site_url ?>/ScriptsNG/Controller/LoginController.js"></script>
     <body id="fm-login">
         <div class="login-bg-image" style="background-image: url(../Content/image/bg.jpg);"></div>
 
