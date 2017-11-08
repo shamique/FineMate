@@ -14,9 +14,9 @@
     });
 </script>
 
-<script src="<?php echo $site_url ?>/ScriptsNG/Module/FineMasterModule.js"></script>
-<script src="<?php echo $site_url ?>/ScriptsNG/Service/FineMasterService.js"></script>
-<script src="<?php echo $site_url ?>/ScriptsNG/Controller/FineMasterController.js"></script>
+<script src="../ScriptsNG/Module/FineMasterModule.js"></script>
+<script src="../ScriptsNG/Service/FineMasterService.js"></script>
+<script src="../ScriptsNG/Controller/FineMasterController.js"></script>
 
 <style>
     .page-caption {
@@ -78,10 +78,10 @@
                                  boundary-links="true">
         </dir-pagination-controls>
 
-        @*<div map-lazy-load="https://maps.google.com/maps/api/js"
+        <!--<div map-lazy-load="https://maps.google.com/maps/api/js"
                  map-lazy-load-params="{{googleMapsUrl}}">
                 <ng-map center="41,-87" zoom="3"></ng-map>
-            </div>*@
+            </div>-->
 
         <script type="text/ng-template" id="fineForm">
             <div class="ngdialog-message">

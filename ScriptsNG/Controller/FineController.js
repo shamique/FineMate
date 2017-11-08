@@ -90,6 +90,9 @@
             scope: $scope
         });
     }
+    
+    $scope.driverId = null;
+    $scope.vehicleOwner = null;
 
     $scope.loadDriver = function () {
         var getDriver = FineService.loadDrvrName($scope.LicenseNumber);
@@ -109,6 +112,7 @@
                     $scope.nicNumber = res.data[0].NIC;
                     $scope.DOB = parseDate(res.data[0].DOB);
                     $scope.address = res.data[0].Address;
+                    $scope.driverId = res.data[0].driver_id;
                 }   
             }
             else{
@@ -147,7 +151,7 @@
             var fineObj = $scope.getFineDetail();
 
             if (fineObj.length > 0) {
-                var saveFine = FineService.saveFine($scope.LicenseNumber, $scope.VehicleId.VechicleId, $scope.OfficerId.PoliceOfficerId, $('#DateOfExpired').val(),
+                var saveFine = FineService.saveFine($scope.driverId, $scope.vehicleOwner, $scope.OfficerId.PoliceOfficerId,
                     $scope.FineNumber, $scope.CheckpointId.CheckpointId, $scope.PostDepId.PostDeptId, fineObj);
 
                 saveFine.then(function (msg) {
@@ -226,6 +230,20 @@
         }
 
         $scope.fineList.splice(index, 1);
+    }
+
+    $scope.loadVehicleOwner = function(){
+        if($scope.VehicleId != null){
+            var vehicleOwner = FineService.getVehicleOwner($scope.VehicleId.VechicleId);
+            vehicleOwner.then(function (res) {
+                if (res != null) {
+                    $scope.vehicleOwner =  res.data[0].vehicle_owner_id;
+                }
+                else {
+                    $scope.vehicleOwner = "";
+                }
+            }, function () { swal("Something went wrong", "", "error"); });   
+        }
     }
 
     function validation() {

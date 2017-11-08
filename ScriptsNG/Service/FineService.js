@@ -36,19 +36,22 @@
         return getDataFromService(4);
     }
 
-    this.saveFine = function (licenseNumber, vehicleId, officerId, deadline, fineRefNum, checkpointId, postDeptId, fineDtlObj) {
+    this.getVehicleOwner= function(vhId){
+        var response = $http({ method: "post", url: "../ServerAPI/fineFormGet.php", data: { typeId: 10, OptionalParam: vhId } });
+        return response;
+    }
 
+    this.saveFine = function (driverId, vehicleOwnerId, officerId, fineRefNum, checkpointId, postDeptId, fineDtlObj) {
         var response = $http({
             method: "post",
-            url: "Fine/saveFineRecord",
+            url: "../ServerAPI/fineOperation.php",
             data: {
-                licenseNumber: licenseNumber,
-                vehicleId: vehicleId,
+                driverId: driverId,
+                vehicleOwnerId: vehicleOwnerId,
                 officerId: officerId,
-                fineDeadline: deadline,
-                fineRefNum: fineRefNum,
-                checkpointId: checkpointId,
-                postDepartmentId: postDeptId,
+                referenceNumber: fineRefNum,
+                checkPointId: checkpointId,
+                postalDeptId: postDeptId,
                 FineDetailList: fineDtlObj
             }
         });

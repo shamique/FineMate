@@ -91,7 +91,7 @@
                         <span class="input-block-addon">Vehicle Number</span>
                         <div class="input-inner-block">
                             <select id="VehicleId" class="form-control" ng-model="VehicleId"
-                                    ng-options="vehicle.VehicleNumber for vehicle in vehicleList track by vehicle.VechicleId"></select>
+                                    ng-options="vehicle.VehicleNumber for vehicle in vehicleList track by vehicle.VechicleId" ng-blur="loadVehicleOwner()"></select>
                             <span class="input-block-addon" id="validate_VehicleId"></span>
                         </div>
                     </div>

@@ -43,7 +43,10 @@
         case 9:
             $query ="select rule_violation_fine_charge, rule_violation_number_of_points, rule_violation_reason, rule_violation_id, rule_violation_court_penalty_or_both 
                     from rule_violation_details where rule_violation_id = $OptionalParam;";
-            break;            
+            break;
+        case 10:
+            $query ="select vehicle_owner_id from vehicle_owner_details where vehicle_owner_vehicle_id = $OptionalParam;";
+            break;                        
         default:
             break;
     }

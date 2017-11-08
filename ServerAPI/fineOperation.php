@@ -1,62 +1,73 @@
 <?php
 
     include_once("dbconnection.php");
-    
-    $driverId = $_POST["driverId"];
-    $vehicleOwnerID = $_POST['vehicleOwnerId'];
-    $latitude = $_POST['latitude'];
-    $longitude = $_POST['longitude'];
-    $totalCharge = $_POST['totalCharge'];
-    $totalPoints = $_POST['totalPoints'];
-    $date = strtotime("+14 days", strtotime($date));
+
+    $postdata = file_get_contents("php://input");
+    $formData = json_decode($postdata);
+
+    $driverId = $formData->driverId;
+    $vehicleOwnerID = $formData->vehicleOwnerId;
+    $date = strtotime("+14 days", strtotime(date("Y/m/d")));
     $deadline = addDayswithdate(date('Y-m-d H:i:s'), 14);
-    $fineAmount = $_POST["fineAmount"];
+    $checkPointId = $formData->checkPointId;
+    $postalDepartmentId = $formData->postalDeptId;
+    $referenceNumber = $formData->referenceNumber;
+    $officerId = $formData->officerId;
 
     $query1 = "insert into fine_details 
             (fine_driver_id, 
             fine_vehicle_owner_id, 
-            fine_location_lat, 
-            fine_location_lng, 
             fine_deadline,
-            fine_total_charge,
             fine_entered_date_and_time,
+            fine_reference_number,
+            checkpoint_id,
+            postal_department_id,
+            fine_entered_by,
+            fine_total_charge
             ) 
-            VALUES ($driverId, $vehicleOwnerID, 
-            '$latitude', '$longitude', '$deadline', 
-            '$fineAmount', '".date('Y-m-d H:i:s')."')";
-  
-
+            VALUES ($driverId, $vehicleOwnerID, '$deadline', '".date('Y-m-d H:i:s')."', '$referenceNumber', $checkPointId, $postalDepartmentId, $officerId,0);";
     mysqli_query($connection, $query1);
     $recordID = mysqli_insert_id($connection);
-  
-    $query2 = "select driver_remain_points from driver_details where driver_id = $licenseID";
-    $remainPointResult = mysqli_query($connection, $query2);
-    $rPoint;
-    while($r = mysqli_fetch_array($remainPointResult)){
-	   $rPoint = $r[driver_remain_points];
-    }
-  
-  $query3 = "update driver_details set driver_remain_points = ($rPoint - $totalPoints) WHERE driver_id = $licenseID";
-  mysqli_query($connection, $query3);
 
-    for ($i = 0; $i < $length; $i++) {
-        $query = "insert into fine_violation_details 
-        (fine_violation_fine_id,
-        fine_violation_violation_id,
-        fine_violation_action, 
-        fine_violation_appointment_date_court)
-        VALUES         
-        ($recordID,
-        $violationIDListAsArray[$i],
-        $actionListAsArray[$i], 
-        '$d')";
-        mysqli_query($connection, $query);
-    }
+    $totalFineAmt = 0;
+    $totalPoints = 0;
 
+    foreach($formData->FineDetailList as $item){
+        $SubQuery = "insert into `finemate`.`fine_violation_details`
+                    (`fine_violation_fine_id`,
+                    `fine_violation_violation_id`,
+                    `fine_violation_action`,
+                    `fine_violation_appointment_date_court`,
+                    `fine_violation_task_completed`,
+                    `fine_violation_entered_date_and_time`,
+                    `fine_violation_active`)
+                    values
+                    (
+                        $recordID,
+                        $item->FineTypId,
+                        1,
+                        '".(strlen($item->courtDate) == 0? date('Y-m-d H:i:s') : $item->courtDate)."',
+                        0,
+                        '".date('Y-m-d H:i:s')."',
+                        1
+                    );";
+        mysqli_query($connection, $SubQuery);
+      
+        $totalFineAmt = $item->FineAmount;
+        $totalPoints = $item->Points; 
+    }
+    
+    $DriverSql = "update driver_details set driver_remain_points = (driver_remain_points - $totalPoints) WHERE driver_id = $driverId";
+    mysqli_query($connection, $DriverSql);
+
+    $fineSql = "update fine_details set fine_total_charge = $totalFineAmt where fine_id = $recordID;";
+    mysqli_query($connection, $fineSql);
 
     function addDayswithdate($date,$days){
         $date = strtotime("+".$days." days", strtotime($date));
         return  date("Y-m-d H:i:s", $date);
     }
 
+    print 'Success';
+    die;
 ?>
