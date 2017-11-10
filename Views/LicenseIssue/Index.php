@@ -1,4 +1,4 @@
-﻿<?php include '../includes/header.php'; ?>﻿
+﻿<?php include '../includes/header.php'; ?>
 <style>
     /*.grid {
       width: 800px;
@@ -12,7 +12,7 @@
 <script src="../ScriptsNG/Module/LicenseIssueModule.js"></script>
 <script src="../ScriptsNG/Service/LicenseIssueService.js"></script>
 <script src="../ScriptsNG/Controller/LicenseIssueController.js"></script>
-<div class="container mid-section">
+<div class="container mid-section license-block">
     <div class="page-caption">
         <h3>License Issue</h3>
         <hr />
@@ -124,4 +124,5 @@
         </script>
     </div>
 </div>
+
 <?php include '../includes/footer.php'; ?>

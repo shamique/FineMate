@@ -13,20 +13,8 @@
                     <ul id="notification">
                         <li class="">
                             <div class="notification-count">{{notification.length}}</div>
-                            <img class="trigger trigger-before hvr-buzz-out" src="../img/notification.png" />
-                            <img class="trigger trigger-after hvr-buzz-out" src="../img/notification.png" />
-                            @*<ul>
-                                    <li>
-                                        <h5>Fine is paid</h5>
-                                        <p>"Descripttion of the fine. Descripttion of the fine. Descripttion of the fine. "</p>
-                                        <hr />
-                                    </li>
-                                    <li>
-                                        <h5>Pay the fine #345654</h5>
-                                        <p>"Descripttion of the fine. Descripttion of the fine. "</p>
-                                        <hr />
-                                    </li>
-                                </ul>*@
+                            <img class="trigger trigger-before hvr-buzz-out" src="<?php echo $site_url ?>/img/notification.png" />
+                            <img class="trigger trigger-after hvr-buzz-out" src="<?php echo $site_url ?>/img/notification.png" />
 
                             <ul>
                                 <div ng-repeat="noti in notification">
@@ -142,3 +130,5 @@
     </div>
 </div>
 
+
+<?php include '../includes/footer.php'; ?>

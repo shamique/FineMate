@@ -213,6 +213,9 @@ nav.main-nav > ul.main-menu li a > i {
     position: relative;
     top: 22px;
 }
+.mid-section.license-block {
+    margin-top: 70px;
+}
 .profile-block {
     margin-top: 70px;
 }

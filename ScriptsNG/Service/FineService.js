@@ -24,7 +24,7 @@
     }
 
     this.loadDrvrName = function (drvId) {
-        var response = $http({ method: "post", url: "../ServerAPI/fineFormGet.php", data: { typeId: 8, OptionalParam: drvId } });
+        var response = $http({ method: "post", url: "../../ServerAPI/fineFormGet.php", data: { typeId: 8, OptionalParam: drvId } });
         return response;
     }
 
@@ -37,7 +37,7 @@
     }
 
     this.getVehicleOwner= function(vhId){
-        var response = $http({ method: "post", url: "../ServerAPI/fineFormGet.php", data: { typeId: 10, OptionalParam: vhId } });
+        var response = $http({ method: "post", url: "../../ServerAPI/fineFormGet.php", data: { typeId: 10, OptionalParam: vhId } });
         return response;
     }
 
@@ -62,7 +62,7 @@
     this.getFinePayment = function (fineTypId) {
         var response = $http({
             method: "post",
-            url: "../ServerAPI/fineFormGet.php",
+            url: "../../ServerAPI/fineFormGet.php",
             data: {
                 typeId: 9,
                 OptionalParam: fineTypId
@@ -74,7 +74,7 @@
     function getDataFromService(typeId){
         var response = $http({
             method: "post",
-            url: "../ServerAPI/fineFormGet.php",
+            url: "../../ServerAPI/fineFormGet.php",
             data: {
                 typeId: typeId
             }
