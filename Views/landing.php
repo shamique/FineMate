@@ -3,11 +3,11 @@
     <?php include 'includes/header.php'; ?>
 
 
-        <section class="page-content-block">
-            <div class="page-loader" id="page-loader">
+    <section class="page-content-block">
+        <div class="page-loader" id="page-loader">
 
-            </div>
-        </section>
+        </div>
+    </section>
 
 
     <style>
@@ -15,6 +15,7 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
+            loadHomePage();
             var rId = $("#roleId").text();
             if (rId == 2) { //Police
                 $("#mnu_dashboard").css("display", "none");
@@ -48,8 +49,26 @@
         function loadPages(pageName) {
             $("#frame").attr('src', pageName);
         }
+        function loadHomePage() {
+            $('#page-loader').load('Fine/FineForm.php');
+        }
+        
 
-        $('#page-loader').load('Fine/FineForm.php');
+        function loadPages(e) {
+//            e.preventDefault();
+            var menuUrl = $(event.target).attr('url');
+//            alert(menuUrl);
+
+//                $('#loading-overlay').addClass('after');
+            $('.page-loader').addClass('after');
+//                loadPage();
+            setTimeout(function () {
+//                    $('#loading-overlay').removeClass('after');
+                $('.page-loader').removeClass('after');
+                $('#page-loader').load(menuUrl);
+            }, 1000);
+        }
+
     </script>
 
     <style>

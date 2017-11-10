@@ -63,11 +63,11 @@
                         <div class="trigger" id="trigger"><img src="img/menu.png" /></div>
                         <ul class="main-menu" id="main-menu">
                             <li id="mnu_dashboard">
-                                <a href="Dashboard/index.php">
+                                <a url="Dashboard/index.php" onclick="loadPages(this)">
                                     <i class="fa fa-bar-chart" aria-hidden="true"></i>
                                     Dashboard</a>
                             </li>
-                            <li id="driver-menu-item"><a href="Driver/DriverMaster.php">
+                            <li id="driver-menu-item"><a url="Driver/DriverMaster.php" onclick="loadPages(this)">
                                     <i class="fa fa-car" aria-hidden="true"></i>
                                     Driver</a></li>
                             <li id="mnu_fine" class="has-sub-menu">
@@ -75,9 +75,9 @@
                                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                     Fine</a>
                                 <ul class="sub-menu">
-                                    <li id="sub_mnu_fineform"><a href="Fine/FineForm.php"><i class="fa fa-file-text" aria-hidden="true"></i>Fine Form</a></li>
-                                    <li id="sub_mnu_finemaster"><a  href="Fine/FineMaster.php"><i class="fa fa-book" aria-hidden="true"></i>Fine Master</a></li>
-                                    <li id="sub_mnu_issuelist"><a  href="LicenseIssue/index.php"><i class="fa fa-list-ol" aria-hidden="true"></i>Fine Issue List</a></li>
+                                    <li id="sub_mnu_fineform"><a url="Fine/FineForm.php" onclick="loadPages(this)"><i class="fa fa-file-text" aria-hidden="true"></i>Fine Form</a></li>
+                                    <li id="sub_mnu_finemaster"><a  url="Fine/FineMaster.php" onclick="loadPages(this)"><i class="fa fa-book" aria-hidden="true"></i>Fine Master</a></li>
+                                    <li id="sub_mnu_issuelist"><a  url="LicenseIssue/index.php" onclick="loadPages(this)"><i class="fa fa-list-ol" aria-hidden="true"></i>Fine Issue List</a></li>
                                 </ul>
                             </li>
                             <li id="mnu_configuration" class="has-sub-menu">
@@ -85,16 +85,16 @@
                                     <i class="fa fa-sliders" aria-hidden="true"></i>
                                     Configurations</a>
                                 <ul class="sub-menu">
-                                    <li><a href="Configuration/PenaltyType.php">Penalty Type</a></li>
+                                    <li><a url="Configuration/PenaltyType.php" onclick="loadPages(this)">Penalty Type</a></li>
                                 </ul>
                             </li>
                             <li class="has-sub-menu user-menu">
                                 <img class="main-menu-ico user-icon" src="../img/user-icon.png" />
                                 <!--<a href="#">@ViewBag.userName</a> -->
                                 <ul class="sub-menu">
-                                    <li id="MnuMyprof"><a href="Driver/MyProfile.php"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
-                                    <li id="MnuMyActivity"><a href="Driver/MyActivity.php"><i class="fa fa-hand-o-up" aria-hidden="true"></i>My Activity</a> </li>
-                                    <li><a href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a></li>
+                                    <li id="MnuMyprof"><a url="Driver/MyProfile.php" onclick="loadPages(this)"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
+                                    <li id="MnuMyActivity"><a url="Driver/MyActivity.php" onclick="loadPages(this)"><i class="fa fa-hand-o-up" aria-hidden="true"></i>My Activity</a> </li>
+                                    <li><a url="index.php" onclick="loadPages(this)"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -130,20 +130,14 @@
     </style>
     <script>
         $(document).ready(function () {
-            loadHome();
-            $('nav.main-nav ul li a').click(function (e) {
-                e.preventDefault();
-                var menuUrl = $(this).attr('href');
-
-//                $('#loading-overlay').addClass('after');
-                $('.page-loader').addClass('after');
-                loadPage();
-
-            });
+//            loadHome();
+//            $('nav.main-nav ul li a').click(function (e) {
+////                loadPages();
+//            });
             $('.logo a').click(function (e) {
                 e.preventDefault();
                 var menuUrl = $(this).attr('href');
-                $('#page-loader').load(menuUrl);
+//                $('#page-loader').load(menuUrl);
             });
 
             $('li.has-sub-menu.user-menu').click(function () {
@@ -154,14 +148,5 @@
                 $('li.has-sub-menu.user-menu > ul.sub-menu').removeClass('after');
             });
         });
-        function loadPage() {
-            setTimeout(function () {
-//                    $('#loading-overlay').removeClass('after');
-                $('.page-loader').removeClass('after');
-                $('#page-loader').load(menuUrl);
-            }, 1000);
-        }
-        function loadHome() {
-            $('#page-loader').load('/Fine/FineForm.php');
-        }
+
     </script>
