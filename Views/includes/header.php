@@ -1,6 +1,6 @@
 <head>
-    <?php // $site_url = "http://" . $_SERVER['SERVER_NAME'] . ":81/xampp/www/FineMatePhp"; ?>
-    <?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . "/finemate"; ?>
+    <?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . ":81/xampp/www/FineMatePhp"; ?>
+    <?php //$site_url = "http://" . $_SERVER['SERVER_NAME'] . "/finemate/"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap-datetimepicker.css" rel="stylesheet" />
@@ -57,10 +57,10 @@
             <div class="content-wrapper">
                 <div class="container-fluid">
                     <div class="logo">
-                        <a href="Dashboard/index.php" id="logoURL"><img src="<?php echo $site_url; ?>/img/logo.png" /></a>
+                        <a href="Dashboard/index.php" id="logoURL"><img src="<?php echo $site_url; ?>img/logo.png" /></a>
                     </div>
                     <nav class="main-nav">
-                        <div class="trigger" id="trigger"><img src="<?php echo $site_url; ?>/img/menu.png" /></div>
+                        <div class="trigger" id="trigger"><img src="<?php echo $site_url; ?>img/menu.png" /></div>
                         <ul class="main-menu" id="main-menu">
                             <li id="mnu_dashboard">
                                 <a href="Dashboard/index.php">
@@ -89,7 +89,7 @@
                                 </ul>
                             </li>
                             <li class="has-sub-menu user-menu">
-                                <img class="main-menu-ico user-icon" src="<?php echo $site_url; ?>/img/user-icon.png" />
+                                <img class="main-menu-ico user-icon" src="<?php echo $site_url; ?>img/user-icon.png" />
                                 <!--<a href="#">@ViewBag.userName</a> -->
                                 <ul class="sub-menu">
                                     <li id="MnuMyprof"><a href="Driver/MyProfile.php"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
