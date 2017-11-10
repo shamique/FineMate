@@ -1,3 +1,4 @@
+<?php include '../includes/header.php'; ?>
 <script src="<?php echo $site_url ?>/ScriptsNG/Module/DashboardModule.js"></script>
 <script src="<?php echo $site_url ?>/ScriptsNG/Service/DashboardService.js"></script>
 <script src="<?php echo $site_url ?>/ScriptsNG/Controller/DashboardController.js"></script>
@@ -130,3 +131,4 @@
         $('.dashboard-block').delay(3000).addClass('show-dashboard-block');
     });
 </script>
+<?php include '../includes/footer.php'; ?>

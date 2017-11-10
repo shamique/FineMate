@@ -1,3 +1,4 @@
+<?php include '../includes/header.php'; ?>﻿
 <div class="container mid-section">
     <div class="page-caption">
         <h3>Penalty Types</h3>
@@ -39,3 +40,4 @@
         </dir-pagination-controls>
     </div>
 </div>
+<?php include '../includes/footer.php'; ?>

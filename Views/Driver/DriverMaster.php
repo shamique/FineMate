@@ -1,3 +1,4 @@
+<?php include '../includes/header.php'; ?>﻿
 <script>
     $(document).ready(function () {
         $('.page-caption').delay(3000).addClass('show-page-caption');
@@ -66,3 +67,4 @@
         </dir-pagination-controls>
     </div>
 </div>
+<?php include '../includes/footer.php'; ?>

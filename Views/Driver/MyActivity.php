@@ -1,3 +1,4 @@
+<?php include '../includes/header.php'; ?>﻿
 <script src="<?php echo $site_url ?>/ScriptsNG/Module/MyActivityModule.js"></script>
 <script src="<?php echo $site_url ?>/ScriptsNG/Service/MyActivityService.js"></script>
 <script src="<?php echo $site_url ?>/ScriptsNG/Controller/MyActivityController.js"></script>
@@ -89,3 +90,4 @@
         </script>
     </div>
 </div>
+<?php include '../includes/footer.php'; ?>

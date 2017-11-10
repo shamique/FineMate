@@ -1,4 +1,5 @@
-﻿<style>
+﻿<?php include '../includes/header.php'; ?>﻿
+<style>
     /*.grid {
       width: 800px;
       height: 400px;
@@ -123,3 +124,4 @@
         </script>
     </div>
 </div>
+<?php include '../includes/footer.php'; ?>

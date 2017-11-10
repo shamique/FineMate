@@ -176,12 +176,17 @@ div.trigger {
     transition: 0.5s;
 }
 .main-nav li img {
-    transition: 0.5s;
+    transition: 0.3s;
     border-radius: 50%;
     border: 2px solid #aaa;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+}
+.main-nav li img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 .logo > a > img {
@@ -199,3 +204,29 @@ nav.main-nav > ul.main-menu li a > i {
     position: relative;
     top: 2px;
 }
+.mid-section {
+    margin-top: 50px;
+    top: 0px;
+    position: relative;
+}
+.ng-scope > .mid-section {
+    position: relative;
+    top: 22px;
+}
+.profile-block {
+    margin-top: 70px;
+}
+.dashboard-block {
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+a, a:hover {
+    transition: 0.3s !important;
+}
+nav.main-nav li:hover a {
+    color: #fff !important;
+}
+nav.main-nav li a:hover {
+    color: #FFEB3B !important;
+    transition: 0.3s !important;
+} 

@@ -4,7 +4,7 @@
 <script src="../../ScriptsNG/Controller/DriverProfileController.js"></script>
 
 <div class="row">
-    <div class="container" ng-controller="DriverProfileController">
+    <div class="container profile-block" ng-controller="DriverProfileController">
         <!--profile section one-->
         <div class="row">
             <div class="col-sm-6">

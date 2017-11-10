@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-    <?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . ":81/xampp/www/FineMatePhp"; ?>
-    <?php //$site_url = "http://" . $_SERVER['SERVER_NAME'] . "/finemate/"; ?>
+    <?php // $site_url = "http://" . $_SERVER['SERVER_NAME'] . ":81/xampp/www/FineMatePhp"; ?>
+    <?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . "/finemate/"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap-datetimepicker.css" rel="stylesheet" />
@@ -65,11 +65,11 @@
                         <div class="trigger" id="trigger"><img src="<?php echo $site_url; ?>/img/menu.png" /></div>
                         <ul class="main-menu" id="main-menu">
                             <li id="mnu_dashboard">
-                                <a href="Dashboard/index.php">
+                                <a href="<?php echo $site_url ?>/views/Dashboard/index.php">
                                     <i class="fa fa-bar-chart" aria-hidden="true"></i>
                                     Dashboard</a>
                             </li>
-                            <li id="driver-menu-item"><a href="Driver/DriverMaster.php">
+                            <li id="driver-menu-item"><a href="<?php echo $site_url ?>/views/Driver/DriverMaster.php">
                                     <i class="fa fa-car" aria-hidden="true"></i>
                                     Driver</a></li>
                             <li id="mnu_fine" class="has-sub-menu">
@@ -77,9 +77,9 @@
                                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                     Fine</a>
                                 <ul class="sub-menu">
-                                    <li id="sub_mnu_fineform"><a href="../Fine/FineForm.php"><i class="fa fa-file-text" aria-hidden="true"></i>Fine Form</a></li>
-                                    <li id="sub_mnu_finemaster"><a  href="Fine/FineMaster.php"><i class="fa fa-book" aria-hidden="true"></i>Fine Master</a></li>
-                                    <li id="sub_mnu_issuelist"><a  href="LicenseIssue/index.php"><i class="fa fa-list-ol" aria-hidden="true"></i>Fine Issue List</a></li>
+                                    <li id="sub_mnu_fineform"><a href="<?php echo $site_url ?>views/Fine/FineForm.php"><i class="fa fa-file-text" aria-hidden="true"></i>Fine Form</a></li>
+                                    <li id="sub_mnu_finemaster"><a  href="<?php echo $site_url ?>views/Fine/FineMaster.php"><i class="fa fa-book" aria-hidden="true"></i>Fine Master</a></li>
+                                    <li id="sub_mnu_issuelist"><a  href="<?php echo $site_url ?>views/LicenseIssue/index.php"><i class="fa fa-list-ol" aria-hidden="true"></i>Fine Issue List</a></li>
                                 </ul>
                             </li>
                             <li id="mnu_configuration" class="has-sub-menu">
@@ -87,15 +87,15 @@
                                     <i class="fa fa-sliders" aria-hidden="true"></i>
                                     Configurations</a>
                                 <ul class="sub-menu">
-                                    <li><a href="Configuration/PenaltyType.php">Penalty Type</a></li>
+                                    <li><a href="<?php echo $site_url ?>views/Configuration/PenaltyType.php">Penalty Type</a></li>
                                 </ul>
                             </li>
                             <li class="has-sub-menu user-menu">
                                 <img class="main-menu-ico user-icon" src="<?php echo $site_url; ?>/img/user-icon.png" />
                                 <!--<a href="#">@ViewBag.userName</a> -->
                                 <ul class="sub-menu">
-                                    <li id="MnuMyprof"><a href="../Driver/MyProfile.php"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
-                                    <li id="MnuMyActivity"><a href="Driver/MyActivity.php"><i class="fa fa-hand-o-up" aria-hidden="true"></i>My Activity</a> </li>
+                                    <li id="MnuMyprof"><a href="<?php echo $site_url ?>views/Driver/MyProfile.php"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
+                                    <li id="MnuMyActivity"><a href="<?php echo $site_url ?>views/Driver/MyActivity.php"><i class="fa fa-hand-o-up" aria-hidden="true"></i>My Activity</a> </li>
                                     <li><a href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a></li>
                                 </ul>
                             </li>
