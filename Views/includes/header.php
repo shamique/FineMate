@@ -130,14 +130,9 @@
     </style>
     <script>
         $(document).ready(function () {
-//            loadHome();
-//            $('nav.main-nav ul li a').click(function (e) {
-////                loadPages();
-//            });
             $('.logo a').click(function (e) {
                 e.preventDefault();
                 var menuUrl = $(this).attr('href');
-//                $('#page-loader').load(menuUrl);
             });
 
             $('li.has-sub-menu.user-menu').click(function () {

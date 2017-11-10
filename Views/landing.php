@@ -54,16 +54,10 @@
         }
         
 
-        function loadPages(e) {
-//            e.preventDefault();
+        function loadPages() {
             var menuUrl = $(event.target).attr('url');
-//            alert(menuUrl);
-
-//                $('#loading-overlay').addClass('after');
             $('.page-loader').addClass('after');
-//                loadPage();
             setTimeout(function () {
-//                    $('#loading-overlay').removeClass('after');
                 $('.page-loader').removeClass('after');
                 $('#page-loader').load(menuUrl);
             }, 1000);
