@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="app">
-    <?php include 'includes/header.php'; ?>
+    <?php require_once 'includes/header.php'; ?>
 
 
     <section class="page-content-block">
@@ -46,12 +46,12 @@
             }
         });
 
-        function loadPages(pageName) {
-            $("#frame").attr('src', pageName);
-        }
-        function loadHomePage() {
-            $('#page-loader').load('Fine/FineForm.php');
-        }
+//        function loadPages(pageName) {
+//            $("#frame").attr('src', pageName);
+//        }
+//        function loadHomePage() {
+//            $('#page-loader').load('Fine/FineForm.php');
+//        }
         
 
         function loadPages() {
