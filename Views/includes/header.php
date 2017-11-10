@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html ng-app="app">
 <head>
     <?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . ":81/xampp/www/FineMatePhp"; ?>
     <?php //$site_url = "http://" . $_SERVER['SERVER_NAME'] . "/finemate/"; ?>
