@@ -1,5 +1,6 @@
 <head>
-    <?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . ":81/xampp/www/FineMatePhp"; ?>
+    <?php // $site_url = "http://" . $_SERVER['SERVER_NAME'] . ":81/xampp/www/FineMatePhp"; ?>
+    <?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . "/finemate/"; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap.min.css" rel="stylesheet" />
     <link href="<?php echo $site_url ?>/Resources/Bootstrap/CSS/bootstrap-datetimepicker.css" rel="stylesheet" />
@@ -129,19 +130,15 @@
     </style>
     <script>
         $(document).ready(function () {
-            //$('#page-loader').load('/Fine/FineForm.php');
+            loadHome();
             $('nav.main-nav ul li a').click(function (e) {
                 e.preventDefault();
                 var menuUrl = $(this).attr('href');
 
 //                $('#loading-overlay').addClass('after');
                 $('.page-loader').addClass('after');
+                loadPage();
 
-                setTimeout(function () {
-//                    $('#loading-overlay').removeClass('after');
-                    $('.page-loader').removeClass('after');
-                    $('#page-loader').load(menuUrl);
-                }, 1000);
             });
             $('.logo a').click(function (e) {
                 e.preventDefault();
@@ -157,4 +154,14 @@
                 $('li.has-sub-menu.user-menu > ul.sub-menu').removeClass('after');
             });
         });
+        function loadPage() {
+            setTimeout(function () {
+//                    $('#loading-overlay').removeClass('after');
+                $('.page-loader').removeClass('after');
+                $('#page-loader').load(menuUrl);
+            }, 1000);
+        }
+        function loadHome() {
+            $('#page-loader').load('/Fine/FineForm.php');
+        }
     </script>
