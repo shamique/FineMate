@@ -59,10 +59,10 @@
             <div class="content-wrapper">
                 <div class="container-fluid">
                     <div class="logo">
-                        <a href="Dashboard/index.php" id="logoURL"><img src="<?php echo $site_url; ?>img/logo.png" /></a>
+                        <a href="Dashboard/index.php" id="logoURL"><img src="<?php echo $site_url; ?>/img/logo.png" /></a>
                     </div>
                     <nav class="main-nav">
-                        <div class="trigger" id="trigger"><img src="<?php echo $site_url; ?>img/menu.png" /></div>
+                        <div class="trigger" id="trigger"><img src="<?php echo $site_url; ?>/img/menu.png" /></div>
                         <ul class="main-menu" id="main-menu">
                             <li id="mnu_dashboard">
                                 <a href="Dashboard/index.php">
@@ -77,7 +77,7 @@
                                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                                     Fine</a>
                                 <ul class="sub-menu">
-                                    <li id="sub_mnu_fineform"><a href="Fine/FineForm.php"><i class="fa fa-file-text" aria-hidden="true"></i>Fine Form</a></li>
+                                    <li id="sub_mnu_fineform"><a href="../Fine/FineForm.php"><i class="fa fa-file-text" aria-hidden="true"></i>Fine Form</a></li>
                                     <li id="sub_mnu_finemaster"><a  href="Fine/FineMaster.php"><i class="fa fa-book" aria-hidden="true"></i>Fine Master</a></li>
                                     <li id="sub_mnu_issuelist"><a  href="LicenseIssue/index.php"><i class="fa fa-list-ol" aria-hidden="true"></i>Fine Issue List</a></li>
                                 </ul>
@@ -91,10 +91,10 @@
                                 </ul>
                             </li>
                             <li class="has-sub-menu user-menu">
-                                <img class="main-menu-ico user-icon" src="<?php echo $site_url; ?>img/user-icon.png" />
+                                <img class="main-menu-ico user-icon" src="<?php echo $site_url; ?>/img/user-icon.png" />
                                 <!--<a href="#">@ViewBag.userName</a> -->
                                 <ul class="sub-menu">
-                                    <li id="MnuMyprof"><a href="Driver/MyProfile.php"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
+                                    <li id="MnuMyprof"><a href="../Driver/MyProfile.php"><i class="fa fa-user" aria-hidden="true"></i>My Profile</a></li>
                                     <li id="MnuMyActivity"><a href="Driver/MyActivity.php"><i class="fa fa-hand-o-up" aria-hidden="true"></i>My Activity</a> </li>
                                     <li><a href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out</a></li>
                                 </ul>

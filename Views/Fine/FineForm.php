@@ -1,5 +1,3 @@
-<?php $site_url = "http://" . $_SERVER['SERVER_NAME'] . "/finemate/views/"; ?>
-<?php echo $site_url; ?>
 <?php include '../includes/header.php'; ?>
 <script src="../../ScriptsNG/Module/FineModule.js"></script>
 <script src="../../ScriptsNG/Service/FineService.js"></script>

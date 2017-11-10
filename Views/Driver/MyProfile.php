@@ -1,6 +1,7 @@
-<script src="<?php echo $site_url ?>/ScriptsNG/Module/DriverProfileModule.js"></script>
-<script src="<?php echo $site_url ?>/ScriptsNG/Service/DriverProfileService.js"></script>
-<script src="<?php echo $site_url ?>/ScriptsNG/Controller/DriverProfileController.js"></script>
+<?php include '../includes/header.php'; ?>
+<script src="../../ScriptsNG/Module/DriverProfileModule.js"></script>
+<script src="../../ScriptsNG/Service/DriverProfileService.js"></script>
+<script src="../../ScriptsNG/Controller/DriverProfileController.js"></script>
 
 <div class="row">
     <div class="container" ng-controller="DriverProfileController">
@@ -109,7 +110,7 @@
                             <div id="demo" class="w3-center w3-text-white"><span id="percentage"></span></div>
                         </div>
                     </div>
-                    @*<button class="w3-btn btn fill-button" onclick="fillbar()">Fill</button>*@
+                    <!--<button class="w3-btn btn fill-button" onclick="fillbar()">Fill</button>-->
                 </div>
                 
                 <div class="prof-sec-3 bg-sec">
@@ -118,7 +119,7 @@
                         <ul ng-repeat="fine in fineHistory">
                             <li>
                                 <i class="fa fa-history fa-1x" aria-hidden="true"></i>
-                                <label><span>{{fine.FineDate}}</span> | <span>{{fine.FineTime}}</span> | <span>{{fine.checkpoint_name}}</span></label>
+                                <label><span>{{fine.FineDate}}</span> | <span>{{fine.FineTime}}</span></label>
                                 <p>{{fine.RuleLIst}}</p>
                                 <button class="btn fill-button fine-history-btn" ng-click="viewFine(fine.fine_id)">View</button>
                             </li>
