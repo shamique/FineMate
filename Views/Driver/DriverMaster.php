@@ -5,9 +5,9 @@
     });
 </script>
 
-<script src="../ScriptsNG/Module/DriverViewModule.js"></script>
-<script src="../ScriptsNG/Service/DriverViewService.js"></script>
-<script src="../ScriptsNG/Controller/DriverViewController.js"></script>
+<script src="../../ScriptsNG/Module/DriverViewModule.js"></script>
+<script src="../../ScriptsNG/Service/DriverViewService.js"></script>
+<script src="../../ScriptsNG/Controller/DriverViewController.js"></script>
 
 <style>
     .page-caption {

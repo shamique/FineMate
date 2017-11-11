@@ -41,7 +41,7 @@
                     inner join rule_violation_details rvd on fvd.fine_violation_violation_id = rvd.rule_violation_id
                     and fvd.fine_violation_task_completed = 0
                     inner join fine_details fd on fd.fine_id = fvd.fine_violation_fine_id
-                    order by fvd.fine_violation_entered_date_and_time;";
+                    order by fvd.fine_violation_entered_date_and_time limit 5;";
     }
     
     $result = mysqli_query($connection, $query);

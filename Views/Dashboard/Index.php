@@ -68,7 +68,7 @@
                             <div class="card shadow">
                                 <h4 class="card-header">Revenue <span class="tag tag-success" id="revenue-tag">$15,341,110</span></h4>
                                 <div class="card-block">
-                                    @*<div id="revenue-column-chart"></div>*@
+                                    <!--<div id="revenue-column-chart"></div>-->
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
                         <div class="card">
                             <div class="card-block">
                                 <div id="fineRatioGraph"></div>
-                                @*<div id="orders-spline-chart"></div>*@
+                                <!--<div id="orders-spline-chart"></div>-->
                             </div>
                         </div>
                     </div>
@@ -92,20 +92,9 @@
                             <li>
                                 <div class="violator-dp"><img ng-src="../../Public/Uploads/Driver/{{to.national_card_user_img}}" /></div>
                                 <label><span>{{to.national_card_first_name}} {{to.national_card_last_name}}</span></label>
-                                <p>Remaining points : {{to.driver_remain_points}} | No of penalty cases : {{to.NoOfVictim}}</p>
+                                <p>Remaining points : {{to.driver_remain_points}}</p>
                             </li>
-                            @*<li>
-                                <div class="violator-dp"><img src="http://1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" /></div>
-                                <label><span>Gayan Sandamal</span></label>
-                                <p>Remaining points : 24 | No of penalty cases : 8</p>
-                            </li>
-                            <li>
-                                <div class="violator-dp"><img src="http://1plusx.com/app/mu-plugins/all-in-one-seo-pack-pro/images/default-user-image.png" /></div>
-                                <label><span>Sumudu Sahan</span></label>
-                                <p>Remaining points : 24 | No of penalty cases : 8</p>
-                            </li>*@
                         </ul>
-                        @*<button class="w3-btn btn fill-button fine-history-all-btn">View All</button>*@
                     </div>
                 </div>
             </div>

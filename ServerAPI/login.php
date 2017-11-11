@@ -9,11 +9,14 @@
     $Password = md5($formData->Password);
 
 
-    $query = "select user_category_id from login_details where user_username = '".$userNameParam."' and user_password='".$Password."';";
+    $query = "select user_category_id from login_details 
+                where user_username = '".$userNameParam."' and user_password='".$Password."'
+                user_category_id in (1,5);";
     $result = mysqli_query($connection, $query);
 
     if(mysqli_num_rows($result) > 0){
         while($rows = mysqli_fetch_array($result)){
+            setcookie("user_cat_id", $rows->user_category_id);
 			$ress[] = $rows;
         }    
     }

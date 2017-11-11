@@ -147,3 +147,9 @@
         });
 
     </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            alert(document.cookie);
+        });
+    </script>

@@ -1,4 +1,8 @@
 <?php include '../includes/header.php'; ?>﻿
+<script src="../../ScriptsNG/Module/FineMasterModule.js"></script>
+<script src="../../ScriptsNG/Service/FineMasterService.js"></script>
+<script src="../../ScriptsNG/Controller/FineMasterController.js"></script>
+
 <style>
     /*.grid {
       width: 800px;
@@ -14,10 +18,6 @@
         $('.page-caption').delay(3000).addClass('show-page-caption');
     });
 </script>
-
-<script src="../ScriptsNG/Module/FineMasterModule.js"></script>
-<script src="../ScriptsNG/Service/FineMasterService.js"></script>
-<script src="../ScriptsNG/Controller/FineMasterController.js"></script>
 
 <style>
     .page-caption {

@@ -2,25 +2,42 @@
     loadDataToDashboard();
 
     function loadDataToDashboard() {
-        var DashboardData = DashboardService.getDataForDashboard();
+        var DashboardData = DashboardService.getDataForDashboard(1);
         DashboardData.then(function (res) {
-            bindOverViewData(res.data[0]);
-            loadFineRatioGraph(res.data[1]);
-            loadPenaltyWiseGraph(res.data[2]);
-            
-            $scope.top5 = res.data[3];
+            bindOverViewData(res.data);
+        }, function (err) {
+            swal("Something went wrong", "", "error");
+        });
+
+        var FineRatioService = DashboardService.getDataForDashboard(2);
+        FineRatioService.then(function (res) {
+            loadFineRatioGraph(res.data);
+        }, function (err) {
+            swal("Something went wrong", "", "error");
+        });
+
+        var PenaltyWiseServiceG = DashboardService.getDataForDashboard(3);
+        PenaltyWiseServiceG.then(function (res) {
+            loadPenaltyWiseGraph(res.data);
+        }, function (err) {
+            swal("Something went wrong", "", "error");
+        });
+
+        var Top5Ser = DashboardService.getDataForDashboard(4);
+        Top5Ser.then(function (res) {
+            $scope.top5 = res.data;
         }, function (err) {
             swal("Something went wrong", "", "error");
         });
     }
 
     function bindOverViewData(data) {
-        $scope.activeUsers = data[0].Value;
-        $scope.expiredLicense = data[1].Value;
-        $scope.NoOfVictims = data[2].Value;
-        $scope.NoOfCourtCase = data[3].Value;
-        $("#fineRatio").text(data[4].Value+"%");
-        move((data[4].Value));
+        $scope.activeUsers = data[0].Valuee;
+        $scope.expiredLicense = data[0].Valuee;
+        $scope.NoOfVictims = data[0].Valuee;
+        $scope.NoOfCourtCase = data[0].Valuee;
+        //$("#fineRatio").text(data[0].Valuee+"%");
+        //move((data[0].Valuee));
     }
 
     function move(pointCount) {
@@ -43,7 +60,7 @@
     function loadFineRatioGraph(data) {
         for (var i = 0; i < data.length; i++) {
             $scope.FineRatioMonth.push(data[i].Monthh);
-            $scope.FineRatioValue.push(data[i].VictimCount);
+            $scope.FineRatioValue.push(data[i].Valuee);
         }
 
         initFineRatioGraph();

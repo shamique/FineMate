@@ -8,14 +8,11 @@
                 if (role == 1) {
                     $window.location.assign('Driver/MyProfile');
                 }
-                else if (role == 3) {
-                    $window.location.assign('LicenseIssue');
-                }
-                else if (role == 2) {
-                    $window.location.assign('Driver');
+                else if (role == 5) {
+                    $window.location.assign('Dashboard');
                 }
                 else {
-                    $window.location.assign('Dashboard');
+                    swal("Invalid Login", "", "error");
                 }
             }
             else {
